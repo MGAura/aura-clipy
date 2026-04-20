@@ -118,11 +118,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-04-20 21:29 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-04-20 23:31 – Heartbeat-Check ausgeführt
 
-**Entscheidungsbedarf:** Repository weiterhin PRIVATE. GitHub Actions Workflow existiert lokal, aber nicht öffentlich zugänglich. Warte auf Martins Entscheidung:
-
-1. **Repository öffentlich machen** → GitHub Actions automatisch aktiv, Builds automatisiert
-2. **Lokalen Windows-Build testen** → Repository bleibt privat, manueller Test auf Windows-Maschine
-
-**Empfehlung:** Option 1 für langfristiges CI/CD (kostenlose GitHub Actions, automatische Builds bei jedem Push)
+**Aktueller Status:** Repository ist öffentlich, GitHub Actions Workflow-Datei vorhanden. Workflow muss manuell über GitHub UI aktiviert werden (https://github.com/MGAura/aura-clipy/actions → Configure) oder lokaler Windows-Build testen.

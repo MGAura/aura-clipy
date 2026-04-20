@@ -1,8 +1,10 @@
 # STATUS.md - Win Assistent (PC-Begleiter)
 
-**Letzte Aktualisierung:** 2026-04-20 22:46 – Heartbeat-Check durchgeführt
+**Letzte Aktualisierung:** 2026-04-20 23:31 – Heartbeat-Check durchgeführt
 
-**Heartbeat-Check:** 2026-04-20 22:46 – Repository ist jetzt ÖFFENTLICH. GitHub Actions Workflow-Datei existiert (.github/workflows/build.yml). Commit wurde gepusht, aber Workflow-Scope-Fehler beim Hinzufügen via API. Projekt ist bereit für manuellen Build-Test auf Windows.
+**Heartbeat-Check:** 2026-04-20 23:31 – Repository ist ÖFFENTLICH. GitHub Actions Workflow-Datei (.github/workflows/build.yml) vorhanden, aber Workflow noch nicht über GitHub UI aktiviert. Warte auf manuelle Aktivierung oder lokalen Windows-Build-Test.
+
+**Nächster Schritt:** GitHub Actions Workflow manuell aktivieren (https://github.com/MGAura/aura-clipy/actions → Configure) oder lokalen Windows-Build testen.
 
 **Repository:** https://github.com/MGAura/aura-clipy (ÖFFENTLICH)
 **GitHub Actions:** https://github.com/MGAura/aura-clipy/actions (bereit nach manueller Workflow-Erstellung)
