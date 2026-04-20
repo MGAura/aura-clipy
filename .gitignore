@@ -1,0 +1,25 @@
+# Memory and logs
+memory/
+*.log
+*.txt
+*.json
+
+# OpenClaw workspace
+.openclaw/
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build
+bin/
+obj/
+publish/
+
+# OS
+.DS_Store
+Thumbs.db
