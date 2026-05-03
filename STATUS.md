@@ -1,14 +1,16 @@
 # STATUS.md - Win Assistent (PC-Begleiter)
 
-**Letzte Aktualisierung:** 2026-05-03 07:01 – Heartbeat-Check durchgeführt
+**Letzte Aktualisierung:** 2026-05-03 07:45 – Heartbeat-Check durchgeführt
 
-**Heartbeat-Check:** 2026-05-03 07:01 – Repository ist ÖFFENTLICH. GitHub Actions Workflow-Datei jetzt im Root-Verzeichnis, aber kann aufgrund von OAuth-Token-Beschränkungen (`workflow` Scope fehlt) nicht via CLI gepusht werden.
+**Heartbeat-Check:** 2026-05-03 07:45 – Repository ist ÖFFENTLICH. GitHub Actions Workflow-Datei wurde committet, aber kann aufgrund von OAuth-Token-Beschränkungen (`workflow` Scope fehlt) nicht via CLI gepusht werden.
 
 **Nächster Schritt:** Workflow über GitHub UI manuell aktivieren (https://github.com/MGAura/aura-clipy/actions → "New workflow") oder GitHub CLI Token mit `workflow` Scope aktualisieren.
 
+**Workflow-Inhalt:** Bereit im lokalen Repository (.github/workflows/build.yml), muss manuell über GitHub UI eingefügt werden.
+
 **Repository:** https://github.com/MGAura/aura-clipy (ÖFFENTLICH)
-**GitHub Actions:** https://github.com/MGAura/aura-clipy/actions (Workflow muss manuell über UI erstellt werden)
-**Workflow:** .github/workflows/build.yml vorhanden im Root-Verzeichnis (muss via GitHub UI hinzugefügt werden)
+**GitHub Actions:** https://github.com/MGAura/aura-clipy/actions (Workflow muss manuell über UI erstellt werden, da OAuth Token fehlt `workflow` Scope)
+**Aktueller Commit:** cb95d4d (Add GitHub Actions workflow for Windows build) – lokal committet, aber nicht gepusht
 
 ## Aktueller Stand
 
