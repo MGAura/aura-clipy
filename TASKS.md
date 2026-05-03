@@ -56,10 +56,10 @@
 **Repository:** https://github.com/MGAura/aura-clipy  
 **Actions:** https://github.com/MGAura/aura-clipy/actions
 
-**Aktueller Status (2026-05-03 15:18):** Heartbeat-Check durchgeführt. **Neuer Code 8E3B-4A09** generiert. Rate-Limit vorbei.
+**Aktueller Status (2026-05-03 15:36):** Heartbeat-Check durchgeführt. **Neuer Code C90A-1B22** generiert. Rate-Limit vorbei.
 
 **Nächste Aktionen (EMPFEHLUNG):**
-1. **GitHub login/device nutzen:** Gehe zu https://github.com/login/device → Code **8E3B-4A09** eingeben → Scope `workflow` wählen
+1. **GitHub login/device nutzen:** Gehe zu https://github.com/login/device → Code **C90A-1B22** eingeben → Scope `workflow` wählen
 2. **Alternative:** GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren (siehe UPDATE_FOR_MARTIN_NOW.md)
 3. **Alternative:** Lokalen Windows-Build testen (falls verfügbar)
 
@@ -127,6 +127,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 15:31 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 15:45 – Heartbeat-Check ausgeführt
 
-**Aktueller Status:** Neuer Code **8E3B-4A09** wurde vor 13 Minuten (15:18) generiert. GitHub CLI Device Flow läuft (PID: 6745) und wartet auf Eingabe. Code ist noch gültig (~2-17 Minuten verbleibend).
+**Aktueller Status:** Neuer Code **C90A-1B22** wurde vor 9 Minuten (15:36) generiert. GitHub CLI Device Flow läuft und wartet auf Eingabe. Code ist noch gültig (~6 Minuten verbleibend bis ~15:51).
