@@ -125,6 +125,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 19:18 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 19:45 – Heartbeat-Check ausgeführt
 
 **Aktueller Status:** ⚠️ **KRITISCH:** GitHub blockiert Workflow-Push wegen fehlendem OAuth `workflow` Scope. Workflow-Datei existiert lokal korrekt in `.github/workflows/build.yml`, kann aber nicht auf GitHub gepusht werden. Nur manuelle GitHub UI-Erstellung möglich.

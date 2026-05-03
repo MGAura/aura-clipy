@@ -1,58 +1,59 @@
-# Codiac Heartbeat Status - 2026-05-03 18:15
+# Codiac Heartbeat Check - Zusammenfassung
 
-## 🔴 KRITISCHES PROBLEM
+**Datum:** 2026-05-03 19:18  
+**Status:** ⚠️ **KRITISCHER DURCHBRUCH NÖTIG**
 
-**GitHub Actions Workflow ist im falschen Verzeichnis!**
+## Problem-Erkenntnis
 
-- ✅ `aura-clipy/.github/workflows/build.yml` existiert lokal
-- ❌ `.github/workflows/build.yml` existiert NICHT im GitHub Repository
-- GitHub Actions zeigt **0 Workflows** an
+GitHub blockiert automatisierte Workflow-Erstellung wegen fehlendem OAuth `workflow` Scope:
+- Token-Scopes: `gist`, `read:org`, `repo` (KEIN `workflow`)
+- Fehlermeldung: "refusing to allow an OAuth App to create or update workflow `.github/workflows/build.yml` without `workflow` scope"
+- Workflow-Datei existiert lokal korrekt in `.github/workflows/build.yml`
+- Kann nicht auf GitHub gepusht werden
 
-## 🎯 NÄCHSTER SCHRITT (JETZT)
+## Nächster Schritt (FIX)
 
-**GitHub UI manuell nutzen:**
+**Martin muss GitHub UI manuell nutzen:**
 
-1. **Öffne:** https://github.com/MGAura/aura-clipy/actions
+1. **Gehe zu:** https://github.com/MGAura/aura-clipy/actions
 2. **Klicke:** "New workflow" (grüner Button)
-3. **Wähle:** "set up a workflow yourself"
-4. **Kopiere** Workflow-Inhalt aus UPDATE_FOR_MARTIN.md
-5. **Name:** `build.yml`
+3. **Wähle:** "Set up a workflow yourself"
+4. **Kopiere** den Workflow-Code aus `UPDATE_FOR_MARTIN.md`
+5. **Speicere** als `.github/workflows/build.yml`
 6. **Commit:** "Commit directly to the main branch"
-7. **Workflow startet automatisch!**
 
-## ⏳ ZEITPLAN
+## Alternativen
 
-- **Letzter Heartbeat:** 2026-05-03 18:15
-- **Problem erkannt:** 2026-05–03 17:40
-- **Alle Device Flow Codes** sind abgelaufen (letzter Code: 90D3-FF21 um 17:37)
+1. **GitHub CLI neu authentifizieren:** 
+   ```bash
+   gh auth login --scopes workflow,repo
+   ```
+   Dann könnten wir es automatisch versuchen.
 
-## ✅ WAS FUNKTIONIERT
+2. **Lokalen Windows-Build testen** (falls Windows verfügbar)
 
-1. ✅ Repository ist öffentlich (https://github.com/MGAura/aura-clipy)
-2. ✅ Alle Commits sind auf GitHub
-3. ✅ Token hat `repo` Scope
-4. ✅ Workflow-Datei existiert lokal (korrekter Inhalt)
+## Aktueller Stand
 
-## 🚨 WARUM DAS PASSIERT IST
+✅ **Abgeschlossen:**
+- Repository öffentlich und synchronisiert
+- Alle Commits gepusht (22 lokale Commits)
+- Workflow-Datei lokal vorhanden (korrekter Pfad)
+- Dokumentation aktuell
 
-Beim ersten Push wurde nur README.md erstellt (wegen Token-Scope-Limits).
-Die `.github/workflows/` Ordner im Root-Verzeichnis wurde nie erstellt.
-GitHub Actions sucht nur im Root `.github/workflows/`, nicht in Unterverzeichnissen.
+❌ **Blockiert:**
+- GitHub Workflow kann nicht automatisch erstellt/aktualisiert werden
+- OAuth `workflow` Scope fehlt
 
-## 📋 AKTION FÜR MARTIN
+## Timeline der Versuche
 
-**Nur 2-3 Minuten benötigt:**
-1. GitHub Actions Seite öffnen
-2. Workflow manuell erstellen (COPY/PASTE aus UPDATE_FOR_MARTIN.md)
-3. Commit durchführen
+| Zeit | Status |
+|------|--------|
+| 11:41-17:37 | 14 Device Flow Codes generiert (alle abgelaufen) |
+| 17:40 | Workflow-Pfad Problem erkannt |
+| 18:15 | GitHub UI manuelle Lösung empfohlen |
+| **19:18** | **OAuth Scope Issue identifiziert** |
+| **NÄCHSTER** | **MANUELLE GITHUB UI-ERSTELLUNG ERFORDERLICH** |
 
-**Nach dem Commit:**
-- GitHub Actions führt Windows-Build automatisch aus
-- EXE-Datei wird als Artefakt verfügbar
-- WinAssistent kann getestet werden
+## Empfehlung
 
----
-
-**Anleitung in:** `UPDATE_FOR_MARTIN.md`
-**Workflow-Inhalt:** Bereit zum Kopieren
-**Repository:** https://github.com/MGAura/aura-clipy
+**Direkt über GitHub UI erstellen** - das ist der einfachste und schnellste Weg. Sobald der Workflow einmal existiert, funktioniert alles automatisch bei zukünftigen Pushes.

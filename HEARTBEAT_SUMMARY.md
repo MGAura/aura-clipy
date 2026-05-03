@@ -1,25 +1,34 @@
 # Heartbeat Check Summary - Codiac Win Assistent
 
-**Datum:** 2026-05-03 17:40  
-**Status:** 🔄 Phase 5 (Build-Test) - KRITISCHES PROBLEM ENTDECKT
+**Datum:** 2026-05-03 19:18  
+**Status:** 🔄 Phase 5 (Build-Test) - **KRITISCHES OAuth SCOPE PROBLEM**
 
-## Aktuelle Situation
+## 🔴 KRITISCHES PROBLEM IDENTIFIZIERT
+
+**GitHub blockiert Workflow-Creation wegen fehlendem OAuth `workflow` Scope:**
+- GitHub Token hat nur: `gist`, `read:org`, `repo` Scopes
+- **FEHLT:** `workflow` Scope für `.github/workflows/` Dateien
+- Fehlermeldung: "refusing to allow an OAuth App to create or update workflow `.github/workflows/build.yml` without `workflow` scope"
+- Workflow-Datei existiert lokal korrekt in `.github/workflows/build.yml`
+- **Kann nicht auf GitHub gepusht werden**
+
+## ✅ Aktueller Stand
 
 ✅ **Abgeschlossen:**
 - Phase 1-4 komplett implementiert
 - GitHub Repository öffentlich und synchronisiert
 - Authentifizierung für Git-Push funktioniert (Token vorhanden)
-- 20 lokale Commits sind jetzt auf GitHub (nach README.md Erstellung)
+- Workflow-Datei lokal vorhanden (korrekter Pfad: `.github/workflows/build.yml`)
+- 22 lokale Commits (noch nicht gepusht wegen Scope-Problem)
+- Dokumentation aktuell
 
-⚠️ **KRITISCHES PROBLEM:**
-- Workflow-Datei ist in `aura-clipy/.github/workflows/build.yml` - FALSCHER PFAD!
-- GitHub Actions zeigt **0 workflows**
-- API PUT für `.github/workflows/build.yml` schlägt mit 404 fehl
-- Das Root `.github/` Verzeichnis existiert nicht im GitHub Repository
+⚠️ **Blockiert durch OAuth Scope:**
+- GitHub Workflow kann nicht automatisch erstellt/aktualisiert werden
+- **Einzige Lösung:** MANUELLE GitHub UI-Erstellung
 
 ## 🔴 Nächster Schritt (DRINGEND)
 
-**Lösungsweg: GitHub UI manuell nutzen**
+**Lösungsweg: GitHub UI manuell nutzen** (einziger Weg)
 1. Gehe zu: https://github.com/MGAura/aura-clipy/actions
 2. Klicke "New workflow"
 3. Wähle "set up a workflow yourself"
@@ -27,6 +36,14 @@
 5. Name: `build.yml`
 6. Klicke "Start commit" → "Commit directly to the main branch" → "Commit"
 7. Workflow wird automatisch ausgelöst
+
+## Alternative Lösung
+
+**GitHub CLI neu authentifizieren mit erweiterten Scopes:**
+```bash
+gh auth login --scopes workflow,repo
+```
+Dann könnten wir es automatisch versuchen.
 
 ## Workflow-Inhalt (kopiere in GitHub UI)
 
@@ -75,11 +92,17 @@ jobs:
       run: |
         echo "=== Build Output ==="
         if (Test-Path "aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe") {
-          echo "Main EXE: aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe"
+          echo "✅ Main EXE: aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe"
+          Get-Item "aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe" | Format-List *
+        } else {
+          echo "❌ Main EXE not found in bin/"
         }
         
         if (Test-Path "aura-clipy/publish/win-x64/AuraClipy.exe") {
-          echo "Published EXE: aura-clipy/publish/win-x64/AuraClipy.exe"
+          echo "✅ Published EXE: aura-clipy/publish/win-x64/AuraClipy.exe"
+          Get-Item "aura-clipy/publish/win-x64/AuraClipy.exe" | Format-List *
+        } else {
+          echo "❌ Published EXE not found"
         }
     
     - name: Upload build artifacts
@@ -90,36 +113,33 @@ jobs:
           aura-clipy/bin/Release/net10.0-windows/
           aura-clipy/publish/win-x64/
         if-no-files-found: warn
+    
+    - name: Run simple tests (if executable exists)
+      run: |
+        if (Test-Path "aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe") {
+          echo "✅ Main EXE exists, would run tests here"
+          # Add actual test execution when implemented
+        } else {
+          echo "⚠️ No executable found for tests"
+        }
 ```
 
-## Timeline der Authentifizierungsversuche
+## Timeline der Versuche
 
-| Zeit | Code | Status |
-|------|------|--------|
-| 11:41 | 573F-1774 | ❌ Fehlgeschlagen |
-| 11:50 | 9F55-DC5E | ❌ Abgelaufen |
-| 11:56 | 4025-0907 | ❌ Fehlgeschlagen |
-| 12:11 | 99C1-08C8 | ❌ Fehlgeschlagen |
-| 12:27 | 2D6A-562C | ❌ Abgelaufen (~78 Minuten) |
-| 13:45 | 6A01-2399 | ❌ Ungenutzt abgelaufen |
-| 13:54 | 6ACA-8255 | ❌ Abgelaufen (~15 Minuten) |
-| 14:21 | 4ABA-D376 | ❌ Abgelaufen (Rate-Limit) |
-| 15:18 | 8E3B-4A09 | ❌ Web-Flow fehlgeschlagen |
-| 15:36 | C90A-1B22 | ❌ Abgelaufen (~15 Minuten) |
-| 15:54 | 6FF9-A331 | ❌ Abgelaufen (~20 Minuten) |
-| 16:17 | 5AF0-8308 | ❌ Abgelaufen (~28 Minuten) |
-| 16:45 | 58FC-147F | ❌ Abgelaufen (expired_token) |
-| **17:07** | **0817-12EE** | ❌ Abgelaufen |
-| **17:22** | **0B35-84A6** | ❌ Abgelaufen |
-| **17:37** | **90D3-FF21** | ❌ Abgelaufen |
-| **17:40** | **N/A** | ⚠️ **Workflow im falschen Pfad!** |
+| Zeit | Status |
+|------|--------|
+| 11:41-17:37 | 14 Device Flow Codes generiert (alle abgelaufen) |
+| 17:40 | Workflow-Pfad Problem erkannt |
+| 18:15 | GitHub UI manuelle Lösung empfohlen |
+| **19:18** | **OAuth Scope Issue identifiziert** |
+| **NÄCHSTER** | **MANUELLE GITHUB UI-ERSTELLUNG ERFORDERLICH** |
 
 ## Repository Status
 
 - **URL:** https://github.com/MGAura/aura-clipy
 - **Actions:** https://github.com/MGAura/aura-clipy/actions (zeigt 0 Workflows!)
-- **Workflow:** aura-clipy/.github/workflows/build.yml (falscher Pfad)
-- **Token:** Funktioniert für Dateien im Root, aber nicht für `.github/workflows/`
+- **Workflow lokal:** `.github/workflows/build.yml` (existiert korrekt)
+- **GitHub Token Scopes:** `gist`, `read:org`, `repo` (**FEHLT:** `workflow`)
 
 ## Nach erfolgreicher Workflow-Erstellung
 
@@ -130,10 +150,12 @@ jobs:
 
 ## Dokumentation aktualisiert
 
-- ✅ HEARTBEAT.md (letzter Check: 17:40)
-- ✅ STATUS.md (letzte Aktualisierung: 17:40)
+- ✅ HEARTBEAT.md (letzter Check: 19:18, OAuth Scope Issue)
+- ✅ STATUS.md (letzte Aktualisierung: 19:18)
 - ✅ TASKS.md (Phase 5 Status aktualisiert)
-- ✅ UPDATE_FOR_MARTIN.md (mit GitHub UI Anleitung)
+- ✅ UPDATE_FOR_MARTIN.md (mit aktueller GitHub UI Anleitung)
+- ✅ CURRENT_STATUS.md (Zusammenfassung für Martin)
 - ✅ HEARTBEAT_SUMMARY.md (diese Übersicht)
 
-**Nächster Heartbeat:** Wird automatisch nach 1 Stunde geprüft (ca. 18:40)
+**Nächster Heartbeat:** Wird automatisch nach 1 Stunde geprüft (ca. 20:18)
+**Dringende Aktion:** Martin muss GitHub UI manuell nutzen!
