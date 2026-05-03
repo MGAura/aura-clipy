@@ -1,6 +1,6 @@
-**Letzte Aktualisierung:** 2026-05-03 15:36 – Neuer Authentifizierungsversuch gestartet
+**Letzte Aktualisierung:** 2026-05-03 15:45 – Heartbeat-Check durchgeführt, Device Flow läuft
 
-**Heartbeat-Check:** 2026-05-03 15:36 – Web-Flow mit Code 8E3B-4A09 fehlgeschlagen. Neuer Device Flow Code **C90A-1B22** generiert um 15:36.
+**Heartbeat-Check:** 2026-05-03 15:45 – GitHub CLI Device Flow mit Code **C90A-1B22** aktiv (~6 Minuten verbleibend bis ~15:51).
 
 **Nächster Schritt:** GitHub login/device öffnen: https://github.com/login/device → Code **C90A-1B22** eingeben → Scope `workflow` wählen → Authentifizierung abschließen
 
@@ -9,7 +9,9 @@
 **Repository:** https://github.com/MGAura/aura-clipy (ÖFFENTLICH)
 **GitHub Actions:** https://github.com/MGAura/aura-clipy/actions
 **Rate-Limit:** Vorbei
-**Neuer Code:** C90A-1B22 (FRISCH generiert um 15:36)
+**Neuer Code:** C90A-1B22 (FRISCH generiert um 15:36, ~6 Minuten verbleibend)
+
+**GitHub CLI Status:** Device Flow läuft (PID: 6918), wartet auf Authentifizierung
 
 ## Aktueller Stand
 
