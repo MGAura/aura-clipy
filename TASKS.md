@@ -126,6 +126,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 07:45 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 08:02 – Heartbeat-Check ausgeführt
 
 **Aktueller Status:** GitHub Actions Workflow-Datei lokal committet (cb95d4d), Commits mit Workflow-Erstellung warten auf Push (Authentifizierungsproblem). Workflow muss manuell über GitHub UI aktiviert werden (https://github.com/MGAura/aura-clipy/actions → "New workflow") oder GitHub CLI Token mit `workflow` Scope aktualisieren.

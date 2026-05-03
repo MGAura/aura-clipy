@@ -1,8 +1,8 @@
 # STATUS.md - Win Assistent (PC-Begleiter)
 
-**Letzte Aktualisierung:** 2026-05-03 07:45 – Heartbeat-Check durchgeführt
+**Letzte Aktualisierung:** 2026-05-03 08:02 – Heartbeat-Check durchgeführt
 
-**Heartbeat-Check:** 2026-05-03 07:45 – Repository ist ÖFFENTLICH. GitHub Actions Workflow-Datei wurde committet, aber kann aufgrund von OAuth-Token-Beschränkungen (`workflow` Scope fehlt) nicht via CLI gepusht werden.
+**Heartbeat-Check:** 2026-05-03 08:02 – Repository ist ÖFFENTLICH. GitHub Actions Workflow-Datei wurde committet (cb95d4d), aber OAuth-Token-Beschränkungen (`workflow` Scope fehlt) verhindern Push.
 
 **Nächster Schritt:** Workflow über GitHub UI manuell aktivieren (https://github.com/MGAura/aura-clipy/actions → "New workflow") oder GitHub CLI Token mit `workflow` Scope aktualisieren.
 
