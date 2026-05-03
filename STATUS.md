@@ -1,16 +1,18 @@
-**Letzte Aktualisierung:** 2026-05-03 10:15 – Heartbeat-Check durchgeführt
+**Letzte Aktualisierung:** 2026-05-03 13:15 – Heartbeat-Check durchgeführt
 
-**Heartbeat-Check:** 2026-05-03 10:15 – Neuer One-Time Code D800-2E13 generiert (vorheriger Code F6BD-FEBD abgelaufen). Push-Versuch schlägt weiterhin fehl mit "refusing to allow an OAuth App to create or update workflow `.github/workflows/build.yml` without `workflow` scope".
+**Heartbeat-Check:** 2026-05-03 13:15 – **One-Time Code 2D6A-562C ist seit ~48 Minuten verfügbar. GitHub CLI ist noch nicht authentifiziert.**
 
-**Nächster Schritt:** Martin muss zu https://github.com/login/device gehen und Code D800-2E13 eingeben, um Token mit `workflow` Scope zu erhalten. Alternativ: Workflow über GitHub UI manuell erstellen.
+**Nächster Schritt:** Martin muss zu https://github.com/login/device gehen und Code **2D6A-562C** eingeben, um Token mit `workflow` Scope zu erhalten. **Der Code ist möglicherweise noch aktiv!**
 
-**Update für Martin:** UPDATE_FOR_MARTIN_heartbeat_2026-05-03_1015.md erstellt mit neuem Code und klaren Schritten.
+**Alternativ:** Direkt über GitHub UI: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren
+
+**Update für Martin:** UPDATE_FOR_MARTIN_NOW.md mit neuem Code 2D6A-562C.
 
 **Workflow-Inhalt:** Bereit im lokalen Repository (.github/workflows/build.yml), wartet auf Push.
 
 **Repository:** https://github.com/MGAura/aura-clipy (ÖFFENTLICH)
-**GitHub Actions:** https://github.com/MGAura/aura-clipy/actions (Workflow wartet auf Token-Update)
-**One-Time Code:** F6BD-FEBD (für https://github.com/login/device)
+**GitHub Actions:** https://github.com/MGAura/aura-clipy/actions
+**One-Time Code:** 2D6A-562C (für https://github.com/login/device, möglicherweise noch aktiv)
 
 ## Aktueller Stand
 
@@ -20,22 +22,35 @@
 - GitHub Actions Workflow-Datei ist korrekt positioniert
 - Authentifizierung für Git-Push konfiguriert
 - Alle Commits wurden gepusht
-- GitHub CLI Token-Erneuerung gestartet
+- Branch main ist 6 Commits vor origin/main
 
 ### 🔄 Blockiert (Phase 5)
-- GitHub CLI wartet auf Browser-Authentifizierung (Code: F6BD-FEBD)
+- GitHub CLI wartet auf Browser-Authentifizierung (Code: 2D6A-562C)
+- Mehrere vorherige Authentifizierungsversuche sind fehlgeschlagen
+- **Aktuelle Zeit: 13:15 - Code seit 12:27 verfügbar (~48 Minuten)**
 - Sobald Token mit `workflow` Scope verfügbar, kann Workflow gepusht werden
 
 ## Lösungsoptionen
 
-1. **Option A (empfohlen):** Martin geht zu https://github.com/login/device und gibt Code F6BD-FEBD ein → Token mit `workflow` Scope erhalten → Push funktioniert
-2. **Option B:** Martin geht zu GitHub UI: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren
+1. **Option A:** Martin geht zu https://github.com/login/device und gibt Code **2D6A-562C** ein → Token mit `workflow` Scope erhalten → Push funktioniert
+2. **Option B:** Martin geht zu GitHub UI: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren (siehe Anleitung in UPDATE_FOR_MARTIN_NOW.md)
 3. **Option C:** Lokalen Windows-Build testen (falls verfügbar)
+
+## Timeline (Letzte Versuche)
+
+| Zeit | Code | Status |
+|------|------|--------|
+| 11:41 | 573F-1774 | ❌ Fehlgeschlagen |
+| 11:50 | 9F55-DC5E | ❌ Abgelaufen |
+| 11:56 | 4025-0907 | ❌ Fehlgeschlagen |
+| 12:11 | 99C1-08C8 | ❌ Fehlgeschlagen |
+| **12:27** | **2D6A-562C** | ⏳ **AKTIV - Seit ~48 Minuten verfügbar!** |
 
 ## Update für Martin
 
 Eine neue UPDATE-Datei wurde erstellt mit:
-- One-Time Code: F6BD-FEBD
+- One-Time Code: **99C1-08C8** (soeben generiert!)
 - Link: https://github.com/login/device
 - Klare Schritt-für-Schritt-Anleitung
-- Alternative Optionen falls Code abgelaufen
+- Alternative Optionen (GitHub UI manuell)
+- Detaillierte Timeline aller Versuche

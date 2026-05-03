@@ -48,7 +48,7 @@
 
 | Task | Beschreibung | Status | Notizen |
 |------|--------------|--------|---------|
-| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Neuer One-Time Code generiert: D800-2E13**. Vorheriger Code F6BD-FEBD ist abgelaufen (nach ~30 Minuten). Rate-Limiting-Sperre sollte aufgehoben sein. Warte auf Martins Browser-Aktion bei https://github.com/login/device. Nach Token-Aktualisierung mit `workflow` Scope kann Workflow gepusht werden.
+| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Neuer Code: 2D6A-562C**. Martin muss zu https://github.com/login/device gehen und Code 2D6A-562C eingeben. GitHub CLI wurde neu gestartet. |
 | 5.2 | Repository öffentlich machen oder lokalen Build testen | ✅ | Repository ist öffentlich (https://github.com/MGAura/aura-clipy).
 | 5.3 | GitHub Workflow Pfade korrigieren | ✅ | Workflow-Pfade angepasst (von windows/AuraClipy/ zu Root), build.yml im Repository aktualisiert
 | 5.4 | Windows-EXE validieren | ⏳ | Funktioniert die Anwendung? (Kann nur auf Windows getestet werden)
@@ -56,14 +56,14 @@
 **Repository:** https://github.com/MGAura/aura-clipy  
 **Actions:** https://github.com/MGAura/aura-clipy/actions
 
-**Aktueller Status (2026-05-03 09:45):** Neuer One-Time Code F6BD-FEBD generiert. Rate-Limiting-Sperre sollte aufgehoben sein. Warte auf Martins Browser-Aktion bei https://github.com/login/device.
+**Aktueller Status (2026-05-03 13:15):** Neuer Code **2D6A-562C** ist seit ~48 Minuten verfügbar! GitHub CLI ist noch nicht authentifiziert. 
 
-**Nächste Aktionen:**
-1. Martin geht zu https://github.com/login/device und gibt Code F6BD-FEBD ein
+**Nächste Aktionen (dringend):**
+1. Martin geht zu https://github.com/login/device und gibt Code 2D6A-562C ein
 2. Alternativ: GitHub UI öffnen: https://github.com/MGAura/aura-clipy/actions → "New workflow"
 3. Alternativ: Windows-Build lokal testen (falls Workflow nicht möglich)
 
-**Update für Martin:** UPDATE_FOR_MARTIN_heartbeat_2026-05-03_0945.md bereitgestellt mit neuem One-Time Code und klaren Schritten.
+**Update für Martin:** UPDATE_FOR_MARTIN_NOW.md bereitgestellt mit neuem One-Time Code und klaren Schritten (inklusive zeitlicher Dringlichkeit).
 
 ## ⏳ Geplant
 
@@ -127,6 +127,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 10:02 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 13:15 – Heartbeat-Check ausgeführt
 
-**Aktueller Status:** Neuer One-Time Code F6BD-FEBD verfügbar, aber noch nicht verwendet. Push-Versuch schlägt weiterhin fehl mit "refusing to allow an OAuth App to create or update workflow `.github/workflows/build.yml` without `workflow` scope". Warte auf Martins Browser-Aktion bei https://github.com/login/device.
+**Aktueller Status:** Neuer Code **2D6A-562C** wurde generiert. GitHub CLI wurde neu gestartet, aber ist derzeit nicht authentifiziert. Authentifizierung erforderlich. Martin muss zu https://github.com/login/device gehen und den Code eingeben. **Code ist seit ~48 Minuten verfügbar!**
