@@ -56,14 +56,14 @@
 **Repository:** https://github.com/MGAura/aura-clipy  
 **Actions:** https://github.com/MGAura/aura-clipy/actions
 
-**Aktueller Status (2026-05-03 13:54):** Neuer Code **6ACA-8255** ist gerade generiert! GitHub CLI wartet auf Authentifizierung. Authentifizierung muss innerhalb der nächsten ~15 Minuten durchgeführt werden (bis ca. 14:09). 
+**Aktueller Status (2026-05-03 14:45):** Heartbeat-Check durchgeführt. Code **4ABA-D376** noch gültig, aber Rate-Limit wahrscheinlich noch aktiv (~45 Minuten seit letztem Code-Generation). Device Flow weiterhin blockiert.
 
-**Nächste Aktionen (JETZT):**
-1. Martin geht zu https://github.com/login/device und gibt Code 6A01-2399 ein (gültig bis ca. 14:00)
-2. Alternativ: GitHub UI öffnen: https://github.com/MGAura/aura-clipy/actions → "New workflow"
-3. Alternativ: Windows-Build lokal testen (falls Workflow nicht möglich)
+**Nächste Aktionen (EMPFEHLUNG):**
+1. **GitHub UI manuell nutzen:** Gehe zu https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren (siehe UPDATE_FOR_MARTIN_NOW.md)
+2. **Alternative:** 30-60 Minuten warten, dann Device Flow mit Code 4ABA-D376 versuchen
+3. **Alternative:** Lokalen Windows-Build testen (falls verfügbar)
 
-**Update für Martin:** UPDATE_FOR_MARTIN_NOW.md bereitgestellt mit neuem One-Time Code und klaren Schritten (inklusive zeitlicher Dringlichkeit).
+**Update für Martin:** UPDATE_FOR_MARTIN_NOW.md bereitgestellt mit GitHub UI manueller Anleitung und Rate-Limit Warnung.
 
 ## ⏳ Geplant
 
@@ -127,6 +127,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 13:45 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 14:31 – Heartbeat-Check ausgeführt
 
-**Aktueller Status:** One-Time Code 6A01-2399 ist frisch generiert! GitHub CLI wartet auf Authentifizierung. Authentifizierung muss innerhalb der nächsten ~15 Minuten durchgeführt werden.
+**Aktueller Status:** Neuer Code **4ABA-D376** wurde generiert, aber GitHub hat Rate-Limit gesetzt ("Too many requests"). Device Flow temporär blockiert für ~30-60 Minuten. Martin sollte GitHub UI manuell nutzen oder später versuchen.
