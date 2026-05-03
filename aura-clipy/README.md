@@ -147,3 +147,4 @@ Proprietär - Nur für internen Gebrauch
 ## Kontakt
 
 Für Fragen und Feedback: Martin (via OpenClaw)
+# Build trigger
