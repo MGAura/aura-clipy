@@ -44,25 +44,26 @@
 | 4.3 | Repository-Struktur bereinigen | ✅ |
 | 4.4 | Aktuelle Dokumentation pushen | ✅ |
 
-### Phase 5: Build-Test (2026-04-18 🔄)
+### Phase 5: Build-Test (2026-05-03 🔄)
 
 | Task | Beschreibung | Status | Notizen |
 |------|--------------|--------|---------|
-| 5.1 | GitHub Actions Workflow auslösen | 🔄 | Workflow-Datei lokal vorhanden (Root/.github/workflows/build.yml), OAuth Token fehlt `workflow` Scope für direkten Push. Workflow muss manuell über GitHub UI erstellt werden (https://github.com/MGAura/aura-clipy/actions → "New workflow").
-| 5.2 | Repository öffentlich machen oder lokalen Build testen | ✅ | Repository ist jetzt öffentlich (https://github.com/MGAura/aura-clipy). Entscheidung getroffen: Öffentlichkeit für CI/CD aktiviert.
+| 5.1 | GitHub Actions Workflow auslösen | 🔄 | GitHub CLI Token neu authentifiziert, One-Time Code (9F8C-5989) generiert. Warte auf Martins Browser-Aktion bei https://github.com/login/device. Nach Token-Aktualisierung mit `workflow` Scope kann Workflow gepusht werden.
+| 5.2 | Repository öffentlich machen oder lokalen Build testen | ✅ | Repository ist öffentlich (https://github.com/MGAura/aura-clipy).
 | 5.3 | GitHub Workflow Pfade korrigieren | ✅ | Workflow-Pfade angepasst (von windows/AuraClipy/ zu Root), build.yml im Repository aktualisiert
 | 5.4 | Windows-EXE validieren | ⏳ | Funktioniert die Anwendung? (Kann nur auf Windows getestet werden)
 
 **Repository:** https://github.com/MGAura/aura-clipy  
 **Actions:** https://github.com/MGAura/aura-clipy/actions
 
-**Aktueller Status (2026-05-03 07:15):** GitHub Actions Workflow-Datei im lokalen Repository vorhanden und committet (cb95d4d), aber OAuth Token-Beschränkungen (`workflow` Scope fehlt) verhindern Push. Workflow muss manuell über GitHub UI erstellt werden.
+**Aktueller Status (2026-05-03 09:15):** GitHub CLI Token-Erneuerung gestartet. One-Time Code 9F8C-5989 generiert. Warte auf Martins Browser-Aktion bei https://github.com/login/device.
 
 **Nächste Aktionen:**
-1. GitHub UI öffnen: https://github.com/MGAura/aura-clipy/actions → "New workflow"
-2. Workflow-Inhalt aus lokaler `build.yml` kopieren und einfügen
-3. Alternativ: GitHub CLI Token mit `workflow` Scope aktualisieren
-4. Windows-Build lokal testen (falls Workflow nicht möglich)
+1. Martin geht zu https://github.com/login/device und gibt Code 9F8C-5989 ein
+2. Alternativ: GitHub UI öffnen: https://github.com/MGAura/aura-clipy/actions → "New workflow"
+3. Alternativ: Windows-Build lokal testen (falls Workflow nicht möglich)
+
+**Update für Martin:** UPDATE_FOR_MARTIN_heartbeat_2026-05-03_0915.md bereitgestellt mit One-Time Code und klaren Schritten.
 
 ## ⏳ Geplant
 
@@ -126,6 +127,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 08:02 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 09:15 – Heartbeat-Check ausgeführt
 
-**Aktueller Status:** GitHub Actions Workflow-Datei lokal committet (cb95d4d), Commits mit Workflow-Erstellung warten auf Push (Authentifizierungsproblem). Workflow muss manuell über GitHub UI aktiviert werden (https://github.com/MGAura/aura-clipy/actions → "New workflow") oder GitHub CLI Token mit `workflow` Scope aktualisieren.
+**Aktueller Status:** GitHub CLI Token-Erneuerung gestartet. One-Time Code (9F8C-5989) generiert. Warte auf Martins Browser-Aktion bei https://github.com/login/device. Nach erfolgreicher Authentifizierung kann der Workflow gepusht werden.
