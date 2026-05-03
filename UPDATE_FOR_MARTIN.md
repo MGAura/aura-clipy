@@ -1,4 +1,9 @@
-## 📋 Kurzanleitung für Martin
+## 📋 Kurzanleitung für Martin - AKTUELLER STAND
+
+**Problem:** GitHub blockiert automatische Workflow-Erstellung wegen fehlendem OAuth `workflow` Scope.
+- Workflow-Datei existiert lokal korrekt in `.github/workflows/build.yml`
+- Git Push wird abgelehnt mit Fehler: "refusing to allow an OAuth App to create or update workflow `.github/workflows/build.yml` without `workflow` scope"
+- **Lösung:** Nur manuelle Erstellung über GitHub UI möglich
 
 **Was zu tun ist:**
 1. **GitHub Actions öffnen:** https://github.com/MGAura/aura-clipy/actions
@@ -54,11 +59,17 @@ jobs:
       run: |
         echo "=== Build Output ==="
         if (Test-Path "aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe") {
-          echo "Main EXE: aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe"
+          echo "✅ Main EXE: aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe"
+          Get-Item "aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe" | Format-List *
+        } else {
+          echo "❌ Main EXE not found in bin/"
         }
         
         if (Test-Path "aura-clipy/publish/win-x64/AuraClipy.exe") {
-          echo "Published EXE: aura-clipy/publish/win-x64/AuraClipy.exe"
+          echo "✅ Published EXE: aura-clipy/publish/win-x64/AuraClipy.exe"
+          Get-Item "aura-clipy/publish/win-x64/AuraClipy.exe" | Format-List *
+        } else {
+          echo "❌ Published EXE not found"
         }
     
     - name: Upload build artifacts
@@ -69,14 +80,34 @@ jobs:
           aura-clipy/bin/Release/net10.0-windows/
           aura-clipy/publish/win-x64/
         if-no-files-found: warn
+    
+    - name: Run simple tests (if executable exists)
+      run: |
+        if (Test-Path "aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe") {
+          echo "✅ Main EXE exists, would run tests here"
+          # Add actual test execution when implemented
+        } else {
+          echo "⚠️ No executable found for tests"
+        }
 ```
 
-**Status:** Alle Device Flow Codes abgelaufen → manuelle GitHub UI Lösung erforderlich
-**Aktuelle Zeit:** 2026-05-03 18:45 (Herzschlag-Prüfung)
-**Nächster Schritt:** GitHub UI Workflow erstellen (wie oben)
+**Status:** 
+- ✅ Repository ist öffentlich und synchronisiert
+- ✅ Workflow-Datei existiert lokal korrekt
+- ❌ GitHub API/PUSH blockiert Workflow-Creation/Update (fehlender `workflow` Scope)
+- 🔄 **Manuelle GitHub UI-Erstellung erforderlich**
 
-**Warum GitHub UI?**
-- Workflow liegt in `aura-clipy/.github/workflows/build.yml` statt Root `.github/workflows/`
-- GitHub Actions sucht nur im Root-Verzeichnis
-- GitHub CLI Device Flow funktioniert nicht (alle Codes abgelaufen)
+**Warum nur GitHub UI?**
+- GitHub verweigert OAuth Apps ohne `workflow` Scope, Workflow-Dateien zu erstellen/aktualisieren
+- Alle Device Flow Codes sind abgelaufen
+- Workflow-Datei kann nicht automatisch auf GitHub gepusht werden
 - Einfache Lösung: GitHub UI manuelle Erstellung
+
+**Alternative (falls du GitHub CLI neu konfigurieren willst):**
+```bash
+gh auth login --scopes workflow,repo
+```
+Dann könnten wir es automatisch versuchen.
+
+**Aktuelle Zeit:** 2026-05-03 19:18 (Herzschlag-Prüfung)
+**Nächster Schritt:** GitHub UI Workflow erstellen (wie oben)

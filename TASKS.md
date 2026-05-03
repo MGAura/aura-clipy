@@ -44,22 +44,22 @@
 | 4.3 | Repository-Struktur bereinigen | ✅ |
 | 4.4 | Aktuelle Dokumentation pushen | ✅ |
 
-### Phase 5: Build-Test (2026-05-03 🔄)
+### Phase 5: Build-Test (2026-05-03 ⚠️)
 
 | Task | Beschreibung | Status | Notizen |
 |------|--------------|--------|---------|
-| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Alle Device Flow Codes abgelaufen**. Keine automatische Erstellung möglich. |
+| 5.1 | GitHub Actions Workflow auslösen | ❌ | **Alle Device Flow Codes abgelaufen + OAuth Scope Issue** |
 | 5.2 | Repository öffentlich machen oder lokalen Build testen | ✅ | Repository ist öffentlich (https://github.com/MGAura/aura-clipy). |
-| 5.3 | GitHub Workflow Pfade korrigieren | ⚠️ | ⚠️ KRITISCH: Workflow ist im falschen Verzeichnis! Martin muss GitHub UI manuell nutzen. |
+| 5.3 | GitHub Workflow erstellen | ⚠️ | **KRITISCH: OAuth `workflow` Scope fehlt!** Workflow existiert lokal (`.github/workflows/build.yml`) aber GitHub blockiert Push. Nur manuelle GitHub UI-Lösung möglich. |
 | 5.4 | Windows-EXE validieren | ⏳ | Funktioniert die Anwendung? (Kann nur auf Windows getestet werden) |
 **Repository:** https://github.com/MGAura/aura-clipy  
 **Actions:** https://github.com/MGAura/aura-clipy/actions
 
-**Aktueller Status (2026-05-03 18:45):** Heartbeat-Check durchgeführt. **Alle Device Flow Codes sind abgelaufen.** Workflow-Pfad-Problem besteht weiter.
+**Aktueller Status (2026-05-03 19:18):** Heartbeat-Check durchgeführt. **GitHub blockiert Workflow-Creation/Update wegen fehlendem OAuth `workflow` Scope.** Workflow kann nicht automatisch erstellt/aktualisiert werden.
 
 **Nächste Aktionen (EMPFEHLUNG):**
 1. **⚠️ GitHub UI manuell nutzen:** Gehe zu https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren (siehe UPDATE_FOR_MARTIN.md) → Als build.yml speichern
-2. **Alternative:** Lokalen Windows-Build testen (falls verfügbar)
+2. **Alternative:** GitHub CLI mit erweiterten Scopes neu authentifizieren: `gh auth login --scopes workflow,repo`
 
 **Update für Martin:** UPDATE_FOR_MARTIN.md bereitgestellt mit Schritt-für-Schritt-Anleitung für GitHub UI.
 
@@ -125,6 +125,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 19:02 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 19:18 – Heartbeat-Check ausgeführt
 
-**Aktueller Status:** ⚠️ KRITISCH: Workflow ist im falschen Verzeichnis (`aura-clipy/.github/workflows/build.yml` statt `.github/workflows/`). GitHub Actions zeigt 0 Workflows. GitHub UI manuelle Erstellung erforderlich.
+**Aktueller Status:** ⚠️ **KRITISCH:** GitHub blockiert Workflow-Push wegen fehlendem OAuth `workflow` Scope. Workflow-Datei existiert lokal korrekt in `.github/workflows/build.yml`, kann aber nicht auf GitHub gepusht werden. Nur manuelle GitHub UI-Erstellung möglich.

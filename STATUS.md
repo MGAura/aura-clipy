@@ -1,16 +1,17 @@
-**Letzte Aktualisierung:** 2026-05-03 19:02 – Heartbeat-Check durchgeführt
+**Letzte Aktualisierung:** 2026-05-03 19:18 – Heartbeat-Check durchgeführt
 
-**⚠️ Kritische Entdeckung:** Workflow-Datei ist in `aura-clipy/.github/workflows/build.yml` statt im Root `.github/workflows/`!
-- GitHub Actions zeigt 0 workflows
-- API PUT für `.github/workflows/build.yml` schlägt mit 404 fehl
-- Workflow-Datei existiert nur im `aura-clipy/` Unterverzeichnis
+**⚠️ KRITISCHES PROBLEM:** GitHub API/PUSH blockiert Workflow-Creation/Update wegen fehlendem `workflow` OAuth Scope
+- GitHub verweigert OAuth Apps ohne `workflow` Scope, Workflow-Dateien zu erstellen/aktualisieren
+- Workflow-Datei existiert bereits lokal im korrekten Pfad: `.github/workflows/build.yml`
+- Push wird mit Fehler abgelehnt: "refusing to allow an OAuth App to create or update workflow `.github/workflows/build.yml` without `workflow` scope"
+- GitHub Actions zeigt weiterhin 0 Workflows an (weil Workflow noch nicht auf GitHub ist)
 
-**Nächster Schritt:** GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt einfügen
+**Nächster Schritt:** Martin muss GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt einfügen
 
 **Repository:** https://github.com/MGAura/aura-clipy (ÖFFENTLICH)
 **GitHub Actions:** https://github.com/MGAura/aura-clipy/actions
-**Workflow-Datei:** aura-clipy/.github/workflows/build.yml (falscher Pfad!)
-**Lösung:** GitHub UI manuelle Erstellung
+**Workflow-Datei:** `.github/workflows/build.yml` (lokal vorhanden, aber nicht auf GitHub)
+**Lösung:** Nur manuelle GitHub UI-Erstellung möglich
 
 ## Aktueller Stand
 
@@ -18,18 +19,22 @@
 - Phase 1-4 komplett implementiert
 - GitHub Repository ist öffentlich und synchronisiert
 - Authentifizierung für Git-Push konfiguriert (Token vorhanden)
-- Alle lokalen Commits wurden gepusht
-- 20 lokale Commits sind jetzt auf GitHub (nach README.md Erstellung)
+- **WICHTIG:** Workflow-Datei `.github/workflows/build.yml` existiert lokal (korrekter Pfad)
+- 21 lokale Commits sind jetzt auf GitHub
 
 ### 🔄 In Arbeit (Phase 5) - KRITISCH
-- ⚠️ **KRITISCH:** Workflow ist in `aura-clipy/.github/workflows/build.yml` - falscher Pfad!
-- GitHub Actions erkennt 0 Workflows
+- ⚠️ **KRITISCH:** GitHub blockiert Workflow-Push wegen fehlendem `workflow` OAuth Scope
+- GitHub Actions erkennt 0 Workflows (Workflow nicht auf GitHub)
 - **Lösung:** GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → New workflow
+- **Root Cause:** OAuth Token hat nur `repo` Scope, nicht `workflow` Scope
 
 ## Lösungsoptionen
 
-1. **Option A (Empfehlung):** GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt einfügen
-2. **Option B:** Lokalen Windows-Build testen (falls verfügbar)
+1. **Option A (EINZIGE LÖSUNG):** GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt einfügen
+2. **Option B:** GitHub CLI mit erweiterten Scopes neu authentifizieren (`gh auth login --scopes workflow,repo`)
+3. **Option C:** Lokalen Windows-Build testen (falls verfügbar)
+
+**Empfehlung:** Option A ist einfachster Weg. Option B erfordert Neuanmeldung mit erweiterten Scopes.
 
 ## Workflow-Inhalt (kopiere in GitHub UI)
 
@@ -115,19 +120,26 @@ jobs:
 | **17:07** | **0817-12EE** | ❌ Abgelaufen |
 | **17:22** | **0B35-84A6** | ❌ Abgelaufen |
 | **17:37** | **90D3-FF21** | ❌ Abgelaufen |
-| **17:40** | **N/A** | ⚠️ **Workflow im falschen Pfad!** |
+| **17:40** | **N/A** | ⚠️ **Workflow Pfad-Problem erkannt** |
 | **18:15** | **Heartbeat-Check** | 🔄 **GitHub UI manuelle Lösung empfohlen** |
+| **19:18** | **Git Push** | ❌ **Abgelehnt: OAuth `workflow` Scope fehlt** |
 
 ## Update für Martin
 
-**Problem:** Der Workflow ist im falschen Verzeichnis:
-- ❌ `.github/workflows/build.yml` existiert NICHT im Root
-- ✅ `aura-clipy/.github/workflows/build.yml` existiert (aber GitHub Actions sucht im Root)
+**Problem:** GitHub blockiert automatisierte Workflow-Creation wegen fehlendem OAuth `workflow` Scope:
+- ❌ Automatisierte Methoden (GitHub API, Git Push) sind blockiert
+- ✅ Workflow-Datei existiert lokal korrekt in `.github/workflows/build.yml`
+- ❌ Workflow kann nicht auf GitHub gepusht werden (OAuth Restriction)
 
-**Lösung:**
+**Lösung:** GitHub UI manuelle Erstellung (einziger Weg):
 1. Gehe zu: https://github.com/MGAura/aura-clipy/actions
 2. Klicke "New workflow"
 3. Kopiere den Workflow-Inhalt oben und füge ihn ein
 4. Speicere als `.github/workflows/build.yml`
 5. Klicke "Start commit" → "Commit directly to the main branch"
 6. Workflow wird automatisch ausgelöst
+
+**Alternative:** Wenn du GitHub CLI neu authentifizieren willst:
+```bash
+gh auth login --scopes workflow,repo
+```
