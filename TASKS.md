@@ -127,6 +127,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 09:15 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 09:32 – Heartbeat-Check ausgeführt
 
-**Aktueller Status:** GitHub CLI Token-Erneuerung gestartet. One-Time Code (9F8C-5989) generiert. Warte auf Martins Browser-Aktion bei https://github.com/login/device. Nach erfolgreicher Authentifizierung kann der Workflow gepusht werden.
+**Aktueller Status:** GitHub CLI Authentifizierung blockiert (Too many requests). Brauche Verzögerung vor neuem Login-Versuch. Optionen: GitHub UI öffnen (https://github.com/MGAura/aura-clipy/actions → "New workflow") oder lokalen Windows-Build testen.
