@@ -1,17 +1,17 @@
-**Letzte Aktualisierung:** 2026-05-03 15:45 – Heartbeat-Check durchgeführt, Device Flow läuft
+**Letzte Aktualisierung:** 2026-05-03 15:54 – Neuer Device Flow Code generiert
 
-**Heartbeat-Check:** 2026-05-03 15:45 – GitHub CLI Device Flow mit Code **C90A-1B22** aktiv (~6 Minuten verbleibend bis ~15:51).
+**Heartbeat-Check:** 2026-05-03 15:54 – Neuer Device Flow Code **6FF9-A331** generiert.
 
-**Nächster Schritt:** GitHub login/device öffnen: https://github.com/login/device → Code **C90A-1B22** eingeben → Scope `workflow` wählen → Authentifizierung abschließen
+**Nächster Schritt:** GitHub login/device öffnen: https://github.com/login/device → Code **6FF9-A331** eingeben → Scope `workflow` wählen → Authentifizierung abschließen
 
 **Workflow-Inhalt:** Bereit im lokalen Repository (.github/workflows/build.yml), wartet auf Push.
 
 **Repository:** https://github.com/MGAura/aura-clipy (ÖFFENTLICH)
 **GitHub Actions:** https://github.com/MGAura/aura-clipy/actions
 **Rate-Limit:** Vorbei
-**Neuer Code:** C90A-1B22 (FRISCH generiert um 15:36, ~6 Minuten verbleibend)
+**Neuer Code:** 6FF9-A331 (generiert um 15:54, ~15 Minuten gültig)
 
-**GitHub CLI Status:** Device Flow läuft (PID: 6918), wartet auf Authentifizierung
+**GitHub CLI Status:** Device Flow läuft, Code-Anzeige in Kürze
 
 ## Aktueller Stand
 
@@ -47,7 +47,8 @@
 | 13:54 | 6ACA-8255 | ❌ Abgelaufen (~15 Minuten) |
 | 14:21 | 4ABA-D376 | ❌ Abgelaufen (Rate-Limit) |
 | 15:18 | 8E3B-4A09 | ❌ Web-Flow fehlgeschlagen |
-| **15:36** | **C90A-1B22** | ⚡ **FRISCH generiert!** |
+| 15:36 | C90A-1B22 | ❌ Abgelaufen (~15 Minuten) |
+| **15:54** | **6FF9-A331** | ⚡ **FRISCH generiert!** |
 
 ## Update für Martin
 

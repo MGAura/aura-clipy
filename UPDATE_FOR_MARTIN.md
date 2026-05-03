@@ -1,19 +1,19 @@
 # Update für Martin - Codiac Heartbeat Check
 
-**Zeit:** 2026-05-03 15:45  
+**Zeit:** 2026-05-03 15:54  
 **Heartbeat-ID:** cron:codiac-heartbeat-1776369229
 
 ## Aktueller Status
 
-**Device Flow:** ✅ Läuft mit neuem Code **C90A-1B22** (generiert um 15:36)
-**Gültigkeit:** Noch ~6 Minuten (bis ~15:51)
+**Device Flow:** ✅ Neuer Code **6FF9-A331** generiert (15:54)
+**Gültigkeit:** ~15 Minuten (bis ~16:09)
 **GitHub Repository:** https://github.com/MGAura/aura-clipy
-**Branch:** main ist 15 Commits vor origin/main (einschließlich letztem Update)
+**Branch:** main ist 16 Commits vor origin/main
 
 ## 🔥 Dringender nächster Schritt
 
 1. **Gehe zu:** https://github.com/login/device
-2. **Gib ein:** Code **C90A-1B22**
+2. **Gib ein:** Code **6FF9-A331**
 3. **Wähle Scope:** ✅ `workflow` (wichtig!)
 4. **Autorisiere:** Auf "Authorize MGAura" klicken
 
@@ -90,7 +90,7 @@ dotnet publish -c Release -r win-x64 --self-contained false -o ./publish
 | 13:54 | 6ACA-8255 | ❌ Abgelaufen (~15 Minuten) |
 | 14:21 | 4ABA-D376 | ❌ Abgelaufen (Rate-Limit) |
 | 15:18 | 8E3B-4A09 | ❌ Web-Flow fehlgeschlagen |
-| **15:36** | **C90A-1B22** | ⚡ **AKTIV! (~6 Minuten verbleibend)** |
+| **15:54** | **6FF9-A331** | ⚡ **AKTIV! (~15 Minuten verbleibend)** |
 
 ## Was passiert nach Autorisierung?
 
