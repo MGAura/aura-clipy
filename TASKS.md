@@ -48,7 +48,7 @@
 
 | Task | Beschreibung | Status | Notizen |
 |------|--------------|--------|---------|
-| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Neuer Code: C90A-1B22**. Martin muss zu https://github.com/login/device gehen und Code C90A-1B22 eingeben. GitHub CLI Device Flow läuft. |
+| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Neuer Code: 5AF0-8308**. Martin muss zu https://github.com/login/device gehen und Code 5AF0-8308 eingeben. GitHub CLI Device Flow läuft, wartet auf Eingabe. |
 | 5.2 | Repository öffentlich machen oder lokalen Build testen | ✅ | Repository ist öffentlich (https://github.com/MGAura/aura-clipy).
 | 5.3 | GitHub Workflow Pfade korrigieren | ✅ | Workflow-Pfade angepasst (von windows/AuraClipy/ zu Root), build.yml im Repository aktualisiert
 | 5.4 | Windows-EXE validieren | ⏳ | Funktioniert die Anwendung? (Kann nur auf Windows getestet werden)
@@ -56,14 +56,14 @@
 **Repository:** https://github.com/MGAura/aura-clipy  
 **Actions:** https://github.com/MGAura/aura-clipy/actions
 
-**Aktueller Status (2026-05-03 15:36):** Heartbeat-Check durchgeführt. **Neuer Code C90A-1B22** generiert. Rate-Limit vorbei.
+**Aktueller Status (2026-05-03 16:17):** Heartbeat-Check durchgeführt. **Neuer Code 5AF0-8308** generiert. Rate-Limit möglicherweise zurückgesetzt.
 
 **Nächste Aktionen (EMPFEHLUNG):**
-1. **GitHub login/device nutzen:** Gehe zu https://github.com/login/device → Code **C90A-1B22** eingeben → Scope `workflow` wählen
-2. **Alternative:** GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren (siehe UPDATE_FOR_MARTIN_NOW.md)
+1. **GitHub login/device nutzen:** Gehe zu https://github.com/login/device → Code **5AF0-8308** eingeben → Scope `workflow` wählen
+2. **Alternative:** GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren (siehe UPDATE_FOR_MARTIN.md)
 3. **Alternative:** Lokalen Windows-Build testen (falls verfügbar)
 
-**Update für Martin:** UPDATE_FOR_MARTIN_NOW.md bereitgestellt mit GitHub UI manueller Anleitung und Rate-Limit Warnung.
+**Update für Martin:** UPDATE_FOR_MARTIN.md bereitgestellt mit GitHub UI manueller Anleitung.
 
 ## ⏳ Geplant
 
@@ -127,6 +127,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 15:45 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 16:17 – Heartbeat-Check ausgeführt
 
-**Aktueller Status:** Neuer Code **C90A-1B22** wurde vor 9 Minuten (15:36) generiert. GitHub CLI Device Flow läuft und wartet auf Eingabe. Code ist noch gültig (~6 Minuten verbleibend bis ~15:51).
+**Aktueller Status:** Neuer Device Flow Code **5AF0-8308** wurde gerade (16:17) generiert. GitHub CLI wartet auf Authentifizierung. Code ist frisch und gültig (~15 Minuten verbleibend).

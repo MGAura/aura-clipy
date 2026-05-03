@@ -1,17 +1,17 @@
-**Letzte Aktualisierung:** 2026-05-03 15:54 – Neuer Device Flow Code generiert
+**Letzte Aktualisierung:** 2026-05-03 16:17 – Heartbeat-Check durchgeführt
 
-**Heartbeat-Check:** 2026-05-03 15:54 – Neuer Device Flow Code **6FF9-A331** generiert.
+**Heartbeat-Check:** 2026-05-03 16:17 – **Neuer Device Flow Code 5AF0-8308** wurde gerade generiert. GitHub CLI wartet auf Authentifizierung.
 
-**Nächster Schritt:** GitHub login/device öffnen: https://github.com/login/device → Code **6FF9-A331** eingeben → Scope `workflow` wählen → Authentifizierung abschließen
+**Nächster Schritt:** GitHub login/device öffnen: https://github.com/login/device → Code **5AF0-8308** eingeben → Scope `workflow` wählen → Authentifizierung abschließen
+
+**Alternative:** Wenn Code abgelaufen ist, GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren
 
 **Workflow-Inhalt:** Bereit im lokalen Repository (.github/workflows/build.yml), wartet auf Push.
 
 **Repository:** https://github.com/MGAura/aura-clipy (ÖFFENTLICH)
 **GitHub Actions:** https://github.com/MGAura/aura-clipy/actions
-**Rate-Limit:** Vorbei
-**Neuer Code:** 6FF9-A331 (generiert um 15:54, ~15 Minuten gültig)
-
-**GitHub CLI Status:** Device Flow läuft, Code-Anzeige in Kürze
+**Rate-Limit:** Eventuell zurückgesetzt, neuer Versuch möglich
+**Neuer Code:** 5AF0-8308 (gerade generiert, frisch und gültig)
 
 ## Aktueller Stand
 
@@ -30,7 +30,7 @@
 
 ## Lösungsoptionen
 
-1. **Option A (Empfehlung):** GitHub login/device mit Code **C90A-1B22** → Scope `workflow` wählen
+1. **Option A (Empfehlung):** GitHub login/device mit Code **5AF0-8308** → Scope `workflow` wählen
 2. **Option B:** GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren
 3. **Option C:** Lokalen Windows-Build testen (falls verfügbar)
 
@@ -48,13 +48,14 @@
 | 14:21 | 4ABA-D376 | ❌ Abgelaufen (Rate-Limit) |
 | 15:18 | 8E3B-4A09 | ❌ Web-Flow fehlgeschlagen |
 | 15:36 | C90A-1B22 | ❌ Abgelaufen (~15 Minuten) |
-| **15:54** | **6FF9-A331** | ⚡ **FRISCH generiert!** |
+| 15:54 | 6FF9-A331 | ❌ Abgelaufen (~20 Minuten) |
+| **16:17** | **5AF0-8308** | ⚡ **FRISCH generiert!** |
 
 ## Update für Martin
 
-**Neuer One-Time Code: C90A-1B22**
-- Web-Flow mit altem Code fehlgeschlagen
-- Code ist frisch (15:36 generiert)
-- **Nur 15 Minuten gültig bis ~15:51**
+**Neuer One-Time Code: 5AF0-8308**
+- Code wurde gerade generiert (16:17)
+- **15 Minuten gültig bis ~16:32**
 - Scope `workflow` wählen
-- GitHub UI manuelle Methode bleibt Backup-Option
+- GitHub login/device öffnen: https://github.com/login/device
+- Wenn nicht erfolgreich: GitHub UI manuelle Methode nutzen
