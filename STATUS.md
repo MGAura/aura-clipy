@@ -1,14 +1,41 @@
 # STATUS.md - Win Assistent (PC-Begleiter)
 
-**Letzte Aktualisierung:** 2026-05-03 03:01 – Heartbeat-Check durchgeführt
+**Letzte Aktualisierung:** 2026-05-03 07:01 – Heartbeat-Check durchgeführt
 
-**Heartbeat-Check:** 2026-05-03 03:01 – Repository ist ÖFFENTLICH. GitHub Actions Workflow-Datei lokal vorhanden, aber Commits mit Workflow-Erstellung warten auf Push (Authentifizierungsproblem).
+**Heartbeat-Check:** 2026-05-03 07:01 – Repository ist ÖFFENTLICH. GitHub Actions Workflow-Datei jetzt im Root-Verzeichnis, aber kann aufgrund von OAuth-Token-Beschränkungen (`workflow` Scope fehlt) nicht via CLI gepusht werden.
 
-**Nächster Schritt:** GitHub Actions Workflow manuell aktivieren (https://github.com/MGAura/aura-clipy/actions → Configure) oder lokalen Windows-Build testen oder Commits mit `gh auth setup-git` + `git push` pushen.
+**Nächster Schritt:** Workflow über GitHub UI manuell aktivieren (https://github.com/MGAura/aura-clipy/actions → "New workflow") oder GitHub CLI Token mit `workflow` Scope aktualisieren.
 
 **Repository:** https://github.com/MGAura/aura-clipy (ÖFFENTLICH)
-**GitHub Actions:** https://github.com/MGAura/aura-clipy/actions (bereit nach manueller Workflow-Erstellung)
-**Workflow:** .github/workflows/build.yml vorhanden (muss via GitHub UI hinzugefügt werden)
+**GitHub Actions:** https://github.com/MGAura/aura-clipy/actions (Workflow muss manuell über UI erstellt werden)
+**Workflow:** .github/workflows/build.yml vorhanden im Root-Verzeichnis (muss via GitHub UI hinzugefügt werden)
+
+## Aktueller Stand
+
+### ✅ Abgeschlossen
+- Phase 1-4 komplett implementiert
+- GitHub Repository ist öffentlich und synchronisiert
+- GitHub Actions Workflow-Datei ist korrekt positioniert
+- Authentifizierung für Git-Push konfiguriert
+- Alle Commits wurden gepusht
+
+### 🔄 Blockiert (Phase 5)
+- GitHub Actions Workflow kann nicht automatisch aktiviert werden (OAuth Token fehlt `workflow` Scope)
+- Lösung: Manuelle Aktivierung über GitHub UI erforderlich
+
+## Workflow-Inhalt
+
+Der Workflow ist bereit und korrekt konfiguriert:
+- Build auf Windows-Latest Runner
+- .NET 10.0 mit Windows Desktop Workload
+- Self-contained Windows EXE als Artefakt
+- Automatische Auslösung bei Push zu main/master
+
+## Lösungsschritte
+
+1. **GitHub UI:** Auf https://github.com/MGAura/aura-clipy/actions gehen, "New workflow" klicken, Workflow-Inhalt kopieren
+2. **Oder Token aktualisieren:** Neuen Personal Access Token mit `workflow` Scope erstellen, GitHub CLI neu authentifizieren
+3. **Oder lokaler Build:** Auf Windows-Maschine mit .NET SDK `Build-Skripte\build.cmd` ausführen
 
 ## Was bereits fertig ist
 

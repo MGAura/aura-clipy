@@ -48,7 +48,7 @@
 
 | Task | Beschreibung | Status | Notizen |
 |------|--------------|--------|---------|
-| 5.1 | GitHub Actions Workflow auslösen | ✅ | Repository öffentlich gemacht (2026-04-20 22:45), Workflow-Datei .github/workflows/build.yml vorhanden, aber OAuth Token fehlt workflow-Scope für direkten Push. Workflow kann manuell über GitHub UI hinzugefügt werden.
+| 5.1 | GitHub Actions Workflow auslösen | 🔄 | Workflow-Datei lokal vorhanden (Root/.github/workflows/build.yml), OAuth Token fehlt `workflow` Scope für direkten Push. Workflow muss manuell über GitHub UI erstellt werden (https://github.com/MGAura/aura-clipy/actions → "New workflow").
 | 5.2 | Repository öffentlich machen oder lokalen Build testen | ✅ | Repository ist jetzt öffentlich (https://github.com/MGAura/aura-clipy). Entscheidung getroffen: Öffentlichkeit für CI/CD aktiviert.
 | 5.3 | GitHub Workflow Pfade korrigieren | ✅ | Workflow-Pfade angepasst (von windows/AuraClipy/ zu Root), build.yml im Repository aktualisiert
 | 5.4 | Windows-EXE validieren | ⏳ | Funktioniert die Anwendung? (Kann nur auf Windows getestet werden)
@@ -56,12 +56,12 @@
 **Repository:** https://github.com/MGAura/aura-clipy  
 **Actions:** https://github.com/MGAura/aura-clipy/actions
 
-**Aktueller Status (2026-05-03):** GitHub Actions Workflow-Datei lokal vorhanden, aber Commits mit Workflow-Erstellung warten auf Push (Authentifizierungsproblem). Workflow kann manuell über GitHub UI hinzugefügt werden oder lokaler Windows-Build getestet werden.
+**Aktueller Status (2026-05-03):** GitHub Actions Workflow-Datei im Root-Verzeichnis vorhanden, aber OAuth Token-Beschränkungen (`workflow` Scope fehlt) verhindern automatischen Push. Workflow muss manuell über GitHub UI erstellt werden.
 
 **Nächste Aktionen:**
-1. GitHub CLI Authentifizierung mit `gh auth setup-git` konfigurieren
-2. Commits mit `git push origin main` pushen ODER
-3. Workflow manuell in GitHub UI erstellen (https://github.com/MGAura/aura-clipy/actions → "Configure")
+1. GitHub UI öffnen: https://github.com/MGAura/aura-clipy/actions → "New workflow"
+2. Workflow-Inhalt aus lokaler `build.yml` kopieren und einfügen
+3. Alternativ: GitHub CLI Token mit `workflow` Scope aktualisieren
 4. Windows-Build lokal testen (falls Workflow nicht möglich)
 
 ## ⏳ Geplant
@@ -126,6 +126,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 03:01 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 07:01 – Heartbeat-Check ausgeführt
 
-**Aktueller Status:** GitHub Actions Workflow-Datei lokal vorhanden, Commits mit Workflow-Erstellung warten auf Push (Authentifizierungsproblem). Workflow muss manuell über GitHub UI aktiviert werden (https://github.com/MGAura/aura-clipy/actions → Configure) oder lokaler Windows-Build testen.
+**Aktueller Status:** GitHub Actions Workflow-Datei lokal vorhanden, Commits mit Workflow-Erstellung warten auf Push (Authentifizierungsproblem). Workflow muss manuell über GitHub UI aktiviert werden (https://github.com/MGAura/aura-clipy/actions → "New workflow") oder GitHub CLI Token mit `workflow` Scope aktualisieren.
