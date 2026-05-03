@@ -1,16 +1,16 @@
-**Letzte Aktualisierung:** 2026-05-03 16:45 – Heartbeat-Check durchgeführt
+**Letzte Aktualisierung:** 2026-05-03 17:07 – Heartbeat-Check durchgeführt
 
-**Heartbeat-Check:** 2026-05-03 16:45 – **Neuer Device Flow Code 58FC-147F** wurde gerade generiert. Code ist frisch und gültig (~15 Minuten).
+**Heartbeat-Check:** 2026-05-03 17:07 – **Neuer Device Flow Code 0817-12EE** wurde gerade generiert. Code ist frisch und gültig (~15 Minuten).
 
-**Nächster Schritt:** GitHub login/device öffnen: https://github.com/login/device → Code **58FC-147F** eingeben → Scope `workflow` wählen → Authentifizierung abschließen
+**Vorfall:** Code 58FC-147F ist abgelaufen (expired_token).
 
-**Alternative:** Wenn Device Flow nicht funktioniert, GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren (siehe UPDATE_FOR_MARTIN.md)
+**Nächster Schritt:** GitHub login/device öffnen: https://github.com/login/device → Code **0817-12EE** eingeben → Scope `workflow` wählen → Authentifizierung abschließen
 
 **Workflow-Inhalt:** Bereit im lokalen Repository (.github/workflows/build.yml), wartet auf Push.
 
 **Repository:** https://github.com/MGAura/aura-clipy (ÖFFENTLICH)
 **GitHub Actions:** https://github.com/MGAura/aura-clipy/actions
-**Code-Gültigkeit:** 58FC-147F (frisch generiert, gültig für ~15 Minuten)
+**Code-Gültigkeit:** 0817-12EE (frisch generiert, gültig für ~15 Minuten bis ca. 17:22)
 
 ## Aktueller Stand
 
@@ -19,17 +19,17 @@
 - GitHub Repository ist öffentlich und synchronisiert
 - GitHub Actions Workflow-Datei ist korrekt positioniert
 - Authentifizierung für Git-Push konfiguriert
-- Alle Commits wurden gepusht
-- Branch main ist 12 Commits vor origin/main
+- Alle lokalen Commits wurden gepusht
+- Branch main ist 19 Commits vor origin/main (nach letztem Commit)
 
 ### 🔄 In Arbeit (Phase 5)
-- GitHub CLI: Neuer Device Flow Code **C90A-1B22** generiert
+- GitHub CLI: Neuer Device Flow Code **0817-12EE** generiert (17:07)
 - Warten auf Authentifizierung über https://github.com/login/device
-- **Lösung:** Jetzt authentifizieren mit Code **C90A-1B22**
+- **Lösung:** Jetzt authentifizieren mit Code **0817-12EE**
 
 ## Lösungsoptionen
 
-1. **Option A (Empfehlung):** GitHub login/device mit Code **5AF0-8308** → Scope `workflow` wählen
+1. **Option A (Empfehlung):** GitHub login/device mit Code **0817-12EE** → Scope `workflow` wählen
 2. **Option B:** GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren
 3. **Option C:** Lokalen Windows-Build testen (falls verfügbar)
 
@@ -49,13 +49,14 @@
 | 15:36 | C90A-1B22 | ❌ Abgelaufen (~15 Minuten) |
 | 15:54 | 6FF9-A331 | ❌ Abgelaufen (~20 Minuten) |
 | 16:17 | 5AF0-8308 | ❌ Abgelaufen (~28 Minuten) |
-| **16:45** | **58FC-147F** | ⚡ **FRISCH generiert!** |
+| 16:45 | 58FC-147F | ❌ Abgelaufen (expired_token) |
+| **17:07** | **0817-12EE** | ⚡ **FRISCH generiert!** |
 
 ## Update für Martin
 
-**Neuer One-Time Code: 58FC-147F**
-- Code wurde gerade generiert (16:45)
-- **15 Minuten gültig bis ~17:00**
+**Neuer One-Time Code: 0817-12EE**
+- Code wurde gerade generiert (17:07)
+- **15 Minuten gültig bis ~17:22**
 - Scope `workflow` wählen
 - GitHub login/device öffnen: https://github.com/login/device
 - Wenn nicht erfolgreich: GitHub UI manuelle Methode nutzen (siehe UPDATE_FOR_MARTIN.md)

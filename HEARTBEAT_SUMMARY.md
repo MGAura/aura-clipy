@@ -1,49 +1,36 @@
-# Heartbeat-Check Summary - 2026-05-03 16:17
+# Heartbeat Summary - 2026-05-03 16:45
 
 ## Status
-✅ Heartbeat-Check erfolgreich durchgeführt
-⚡ **Neuer GitHub Device Flow Code: 5AF0-8308**
+✅ Heartbeat-Check durchgeführt
 
-## Aktueller Stand
-- **Projekt:** Codiac/WinAssistent
-- **Phase:** 5 (Build-Test)
-- **GitHub Repository:** https://github.com/MGAura/aura-clipy (öffentlich)
-- **Workflow:** `.github/workflows/build.yml` bereit
-- **Git Status:** 12 Commits vor origin/main
-- **GitHub CLI:** Nicht authentifiziert (Device Flow Code 5AF0-8308 generiert)
+## Aktuelle Herausforderung
+GitHub CLI Authentifizierung benötigt noch manuelle Bestätigung via Device Flow.
 
-## Nächster Schritt
-**GitHub Authentifizierung abschließen:**
-1. Gehe zu https://github.com/login/device
-2. Code **5AF0-8308** eingeben
-3. Scope `workflow` wählen
-4. Authentifizierung bestätigen
+## Neuer Device Flow Code
+**58FC-147F** (frisch generiert um 16:45)
 
-**Alternativ:** GitHub UI manuell verwenden:
-- Gehe zu https://github.com/MGAura/aura-clipy/actions
-- "New workflow" klicken
-- Workflow-Inhalt aus UPDATE_FOR_MARTIN.md kopieren
+## Lösungspfade
+1. **Device Flow (empfohlen):** https://github.com/login/device → Code 58FC-147F eingeben → Scope `workflow` wählen
+2. **Manuelle Workflow-Erstellung:** Repository Actions → "New workflow" → Workflow-Inhalt kopieren
+
+## Fortschritt
+- ✅ Phase 1-4 komplett implementiert  
+- ✅ GitHub Repository öffentlich  
+- ✅ Workflow-Datei erstellt (.github/workflows/build.yml)
+- ✅ 18 Commits warten auf Push
+- 🔄 Authentifizierung hängt noch
+
+## Nächste Schritte
+1. Authentifizierung mit Code 58FC-147F abschließen
+2. Git Push durchführen
+3. GitHub Actions Workflow starten
+4. Windows-Build validieren
+
+## Git Status
+```bash
+On branch main
+Your branch is ahead of 'origin/main' by 19 commits.
+```
 
 ## Timeline
-- **15:54:** Letzter Heartbeat-Check, Code 6FF9-A331 generiert
-- **16:02:** STATUS.md & TASKS.md aktualisiert
-- **16:17:** Neuer Heartbeat-Check, Code 5AF0-8308 generiert
-- **16:17:** Alle Dokumentationen aktualisiert
-
-## Dokumentation aktualisiert
-✅ HEARTBEAT.md - Letzter Check und nächster Schritt
-✅ STATUS.md - Detaillierter Status und Timeline
-✅ TASKS.md - Task-Übersicht und nächste Aktionen
-✅ UPDATE_FOR_MARTIN.md - Anleitung für GitHub Authentifizierung
-
-## Erfolgskriterien
-- ✅ GitHub CLI authentifiziert mit workflow Scope
-- ✅ GitHub Actions Workflow kann gepusht werden
-- ✅ Windows-Build auf GitHub Actions startet
-- ✅ EXE-Datei als Artefakt verfügbar
-- ✅ WinAssistent kann auf Windows getestet werden
-
----
-
-**Bereit für GitHub Authentifizierung mit Code: 5AF0-8308**
-**Gültig bis:** ca. 16:32 (15 Minuten)
+Seit 11:41 laufende Authentifizierungsversuche, neuer Code um 16:45 generiert.

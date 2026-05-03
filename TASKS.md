@@ -48,7 +48,7 @@
 
 | Task | Beschreibung | Status | Notizen |
 |------|--------------|--------|---------|
-| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Neuer Code: 58FC-147F**. Martin muss zu https://github.com/login/device gehen und Code 58FC-147F eingeben. GitHub CLI Device Flow läuft, wartet auf Eingabe. |
+| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Neuer Code: 0817-12EE**. Martin muss zu https://github.com/login/device gehen und Code 0817-12EE eingeben. GitHub CLI Device Flow läuft, wartet auf Eingabe. |
 | 5.2 | Repository öffentlich machen oder lokalen Build testen | ✅ | Repository ist öffentlich (https://github.com/MGAura/aura-clipy).
 | 5.3 | GitHub Workflow Pfade korrigieren | ✅ | Workflow-Pfade angepasst (von windows/AuraClipy/ zu Root), build.yml im Repository aktualisiert
 | 5.4 | Windows-EXE validieren | ⏳ | Funktioniert die Anwendung? (Kann nur auf Windows getestet werden)
@@ -56,7 +56,7 @@
 **Repository:** https://github.com/MGAura/aura-clipy  
 **Actions:** https://github.com/MGAura/aura-clipy/actions
 
-**Aktueller Status (2026-05-03 16:45):** Heartbeat-Check durchgeführt. **Neuer Code 58FC-147F** generiert.
+**Aktueller Status (2026-05-03 17:07):** Heartbeat-Check durchgeführt. **Neuer Code 0817-12EE** generiert. Code 58FC-147F ist abgelaufen (expired_token).
 
 **Nächste Aktionen (EMPFEHLUNG):**
 1. **GitHub login/device nutzen:** Gehe zu https://github.com/login/device → Code **58FC-147F** eingeben → Scope `workflow` wählen
@@ -127,6 +127,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 16:45 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 17:07 – Heartbeat-Check ausgeführt
 
-**Aktueller Status:** Neuer Device Flow Code **58FC-147F** wurde gerade generiert. Code ist frisch und gültig (~15 Minuten). GitHub Authentifizierung erforderlich.
+**Aktueller Status:** Neuer Device Flow Code **0817-12EE** wurde gerade generiert. Code ist frisch und gültig (~15 Minuten bis ca. 17:22). GitHub Authentifizierung erforderlich.
