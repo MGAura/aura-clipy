@@ -1,18 +1,17 @@
-**Letzte Aktualisierung:** 2026-05-03 14:45 – Heartbeat-Check durchgeführt
+**Letzte Aktualisierung:** 2026-05-03 15:18 – Neuer Authentifizierungsversuch gestartet
 
-**Heartbeat-Check:** 2026-05-03 14:45 – Heartbeat-Check durchgeführt. Rate-Limit-Situation unverändert - Code **4ABA-D376** noch gültig, Device Flow wahrscheinlich noch blockiert.
+**Heartbeat-Check:** 2026-05-03 15:18 – Rate-Limit vorbei. Neuer Device Flow Code **8E3B-4A09** generiert.
 
-**Empfehlung:** Nutze GitHub UI manuell: Gehe zu https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren.
+**Empfehlung:** GitHub UI manuell nutzen: Gehe zu https://github.com/login/device → Code **8E3B-4A09** eingeben → Scope `workflow` wählen → Authentifizierung abschließen
 
-**Alternative:** Warte 30-60 Minuten, dann zu https://github.com/login/device gehen und Code **4ABA-D376** eingeben.
-
-**Update für Martin:** UPDATE_FOR_MARTIN_NOW.md mit neuem Code 4ABA-D376 und Lösungsweg.
+**Alternative:** Wenn Device Flow fehlschlägt, weiterhin GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren
 
 **Workflow-Inhalt:** Bereit im lokalen Repository (.github/workflows/build.yml), wartet auf Push.
 
 **Repository:** https://github.com/MGAura/aura-clipy (ÖFFENTLICH)
 **GitHub Actions:** https://github.com/MGAura/aura-clipy/actions
-**One-Time Code:** 4ABA-D376 (für https://github.com/login/device)
+**Rate-Limit:** Vorbei
+**Neuer Code:** 8E3B-4A09 (FRISCH generiert um 15:18)
 
 ## Aktueller Stand
 
@@ -32,8 +31,8 @@
 
 ## Lösungsoptionen
 
-1. **Option A (Empfehlung):** GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren
-2. **Option B:** 30-60 Minuten warten, dann Device Flow mit Code **4ABA-D376** versuchen
+1. **Option A (Empfehlung):** GitHub login/device mit Code **8E3B-4A09** → Scope `workflow` wählen
+2. **Option B:** GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren
 3. **Option C:** Lokalen Windows-Build testen (falls verfügbar)
 
 ## Timeline (Letzte Versuche)
@@ -47,14 +46,13 @@
 | 12:27 | 2D6A-562C | ❌ Abgelaufen (~78 Minuten) |
 | 13:45 | 6A01-2399 | ❌ Ungenutzt abgelaufen |
 | 13:54 | 6ACA-8255 | ❌ Abgelaufen (~15 Minuten) |
-| 14:21 | 4ABA-D376 | ⚡ **Generiert, aber Rate-Limit blockiert** |
-| 14:45 | 4ABA-D376 | 🔄 **Noch gültig, aber Rate-Limit wahrscheinlich noch aktiv** |
+| 14:21 | 4ABA-D376 | ❌ Abgelaufen (54 Minuten alt) |
+| **15:18** | **8E3B-4A09** | ⚡ **FRISCH generiert!** |
 
 ## Update für Martin
 
-Eine neue UPDATE-Datei wurde erstellt mit:
-- One-Time Code: **4ABA-D376** (frisch generiert!)
-- Rate-Limit Warnung
-- Klare Schritt-für-Schritt-Anleitung für GitHub UI manuelle Methode
-- Alternative Optionen
-- Detaillierte Timeline aller Versuche
+Neuer One-Time Code: **8E3B-4A09**
+- Rate-Limit ist vorbei
+- Code ist frisch (15:18 generiert)
+- Scope `workflow` wählen
+- GitHub UI manuelle Methode bleibt Backup-Option

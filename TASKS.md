@@ -48,7 +48,7 @@
 
 | Task | Beschreibung | Status | Notizen |
 |------|--------------|--------|---------|
-| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Neuer Code: 6ACA-8255**. Martin muss zu https://github.com/login/device gehen und Code 6ACA-8255 eingeben. GitHub CLI Device Flow läuft. |
+| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Neuer Code: 8E3B-4A09**. Martin muss zu https://github.com/login/device gehen und Code 8E3B-4A09 eingeben. GitHub CLI Device Flow läuft. |
 | 5.2 | Repository öffentlich machen oder lokalen Build testen | ✅ | Repository ist öffentlich (https://github.com/MGAura/aura-clipy).
 | 5.3 | GitHub Workflow Pfade korrigieren | ✅ | Workflow-Pfade angepasst (von windows/AuraClipy/ zu Root), build.yml im Repository aktualisiert
 | 5.4 | Windows-EXE validieren | ⏳ | Funktioniert die Anwendung? (Kann nur auf Windows getestet werden)
@@ -56,11 +56,11 @@
 **Repository:** https://github.com/MGAura/aura-clipy  
 **Actions:** https://github.com/MGAura/aura-clipy/actions
 
-**Aktueller Status (2026-05-03 14:45):** Heartbeat-Check durchgeführt. Code **4ABA-D376** noch gültig, aber Rate-Limit wahrscheinlich noch aktiv (~45 Minuten seit letztem Code-Generation). Device Flow weiterhin blockiert.
+**Aktueller Status (2026-05-03 15:18):** Heartbeat-Check durchgeführt. **Neuer Code 8E3B-4A09** generiert. Rate-Limit vorbei.
 
 **Nächste Aktionen (EMPFEHLUNG):**
-1. **GitHub UI manuell nutzen:** Gehe zu https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren (siehe UPDATE_FOR_MARTIN_NOW.md)
-2. **Alternative:** 30-60 Minuten warten, dann Device Flow mit Code 4ABA-D376 versuchen
+1. **GitHub login/device nutzen:** Gehe zu https://github.com/login/device → Code **8E3B-4A09** eingeben → Scope `workflow` wählen
+2. **Alternative:** GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren (siehe UPDATE_FOR_MARTIN_NOW.md)
 3. **Alternative:** Lokalen Windows-Build testen (falls verfügbar)
 
 **Update für Martin:** UPDATE_FOR_MARTIN_NOW.md bereitgestellt mit GitHub UI manueller Anleitung und Rate-Limit Warnung.
@@ -127,6 +127,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 14:31 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 15:18 – Heartbeat-Check ausgeführt
 
-**Aktueller Status:** Neuer Code **4ABA-D376** wurde generiert, aber GitHub hat Rate-Limit gesetzt ("Too many requests"). Device Flow temporär blockiert für ~30-60 Minuten. Martin sollte GitHub UI manuell nutzen oder später versuchen.
+**Aktueller Status:** Rate-Limit vorbei. **Neuer Code 8E3B-4A09** generiert. Device Flow wieder verfügbar. GitHub login/device verwenden mit Code **8E3B-4A09**.
