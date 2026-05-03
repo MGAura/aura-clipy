@@ -1,12 +1,12 @@
 # 🔴 DRINGEND: GitHub Authentifizierung für Workflow-Push
 
-**One-Time Code:** `6A01-2399`  
-**Gültig:** bis ca. 14:00 Uhr (15 Minuten ab jetzt)
+**One-Time Code:** `6ACA-8255`  
+**Gültig:** bis ca. 14:09 Uhr (15 Minuten ab jetzt)
 
 ## Was muss Martin tun?
 
 1. **Gehe zu:** https://github.com/login/device
-2. **Gib ein:** `6A01-2399` (oben abkopieren)
+2. **Gib ein:** `6ACA-8255` (oben abkopieren)
 3. **Klicke:** "Continue"
 4. **Bestätige:** Scopes für GitHub CLI (wähle `workflow` wenn gefragt)
 
@@ -15,7 +15,7 @@
 - Ohne Token kann der CI/CD Workflow nicht gepusht werden
 - Dein Repository ist öffentlich: https://github.com/MGAura/aura-clipy
 - Workflow ist fertig: `.github/workflows/build.yml`
-- **7 Commits warten auf Push**
+- **9 Commits warten auf Push**
 
 ## Alternative Option (falls Device-Flow nicht klappt):
 
@@ -33,7 +33,8 @@
 | 11:56 | 4025-0907 | ❌ Fehlgeschlagen |
 | 12:11 | 99C1-08C8 | ❌ Fehlgeschlagen |
 | 12:27 | 2D6A-562C | ❌ Abgelaufen (nach 78 Minuten) |
-| **13:45** | **6A01-2399** | ⚡ **FRISCH - Gerade generiert!** |
+| 13:45 | 6A01-2399 | ❌ Ungenutzt abgelaufen |
+| **13:54** | **6ACA-8255** | ⚡ **FRISCH - Gerade generiert!** |
 
 ## Nach erfolgreicher Authentifizierung:
 - GitHub CLI zeigt: `✓ Authentication complete.`
@@ -41,7 +42,7 @@
 - GitHub Actions startet automatisch
 
 ## Repository Status:
-- Branch `main`: 7 Commits vor `origin/main`
+- Branch `main`: 9 Commits vor `origin/main`
 - Workflow-Datei: vorhanden und korrekt
 - Projekt: komplett implementiert (Phasen 1-4 ✅)
 - Phase 5 (Build-Test): nur noch dieser Schritt fehlt

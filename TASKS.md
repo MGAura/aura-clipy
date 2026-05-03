@@ -48,7 +48,7 @@
 
 | Task | Beschreibung | Status | Notizen |
 |------|--------------|--------|---------|
-| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Neuer Code: 6A01-2399**. Martin muss zu https://github.com/login/device gehen und Code 6A01-2399 eingeben. GitHub CLI Device Flow läuft. |
+| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Neuer Code: 6ACA-8255**. Martin muss zu https://github.com/login/device gehen und Code 6ACA-8255 eingeben. GitHub CLI Device Flow läuft. |
 | 5.2 | Repository öffentlich machen oder lokalen Build testen | ✅ | Repository ist öffentlich (https://github.com/MGAura/aura-clipy).
 | 5.3 | GitHub Workflow Pfade korrigieren | ✅ | Workflow-Pfade angepasst (von windows/AuraClipy/ zu Root), build.yml im Repository aktualisiert
 | 5.4 | Windows-EXE validieren | ⏳ | Funktioniert die Anwendung? (Kann nur auf Windows getestet werden)
@@ -56,7 +56,7 @@
 **Repository:** https://github.com/MGAura/aura-clipy  
 **Actions:** https://github.com/MGAura/aura-clipy/actions
 
-**Aktueller Status (2026-05-03 13:45):** Neuer Code **6A01-2399** ist gerade generiert! GitHub CLI wartet auf Authentifizierung. 
+**Aktueller Status (2026-05-03 13:54):** Neuer Code **6ACA-8255** ist gerade generiert! GitHub CLI wartet auf Authentifizierung. Authentifizierung muss innerhalb der nächsten ~15 Minuten durchgeführt werden (bis ca. 14:09). 
 
 **Nächste Aktionen (JETZT):**
 1. Martin geht zu https://github.com/login/device und gibt Code 6A01-2399 ein (gültig bis ca. 14:00)
