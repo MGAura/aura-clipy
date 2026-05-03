@@ -4,7 +4,10 @@
 
 # Add tasks below when you want the agent to check something periodically.
 
-**Letzter Check:** 2026-04-20 23:53
-**Status:** Repository ist öffentlich, GitHub Actions Workflow-Datei vorhanden, aber Workflow noch nicht in GitHub Actions registriert/aktiviert. Workflow muss manuell über GitHub UI aktiviert werden.
-**Nächster Schritt:** Martin muss GitHub Actions aktivieren (https://github.com/MGAura/aura-clipy/actions → "Configure") oder Windows-Build lokal testen.
-**Update:** UPDATE_FOR_MARTIN_heartbeat_2026-04-20_2353.md wird erstellt
+**Letzter Check:** 2026-05-03 00:30
+**Status:** Repository ist öffentlich, GitHub Actions Workflow-Datei lokal vorhanden, aber noch nicht auf GitHub gepusht. Authentifizierungsprobleme beim Push. Commits (Workflow-Erstellung und Status-Updates) warten auf Push.
+**Nächster Schritt:** Martin muss:
+1. GitHub Actions Workflow manuell aktivieren (https://github.com/MGAura/aura-clipy/actions → "Configure") ODER
+2. Lokalen Windows-Build testen ODER
+3. Lokale Commits mit `gh auth setup-git` + `git push` pushen
+**Update:** UPDATE_FOR_MARTIN_heartbeat_2026-05-03_0030.md erstellt

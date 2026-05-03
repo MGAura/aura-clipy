@@ -56,6 +56,14 @@
 **Repository:** https://github.com/MGAura/aura-clipy  
 **Actions:** https://github.com/MGAura/aura-clipy/actions
 
+**Aktueller Status (2026-05-03):** GitHub Actions Workflow-Datei lokal vorhanden, aber Commits mit Workflow-Erstellung warten auf Push (Authentifizierungsproblem). Workflow kann manuell über GitHub UI hinzugefügt werden oder lokaler Windows-Build getestet werden.
+
+**Nächste Aktionen:**
+1. GitHub CLI Authentifizierung mit `gh auth setup-git` konfigurieren
+2. Commits mit `git push origin main` pushen ODER
+3. Workflow manuell in GitHub UI erstellen (https://github.com/MGAura/aura-clipy/actions → "Configure")
+4. Windows-Build lokal testen (falls Workflow nicht möglich)
+
 ## ⏳ Geplant
 
 ### Phase 6: UI-Verbesserungen
@@ -118,6 +126,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-04-20 23:31 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 03:01 – Heartbeat-Check ausgeführt
 
-**Aktueller Status:** Repository ist öffentlich, GitHub Actions Workflow-Datei vorhanden. Workflow muss manuell über GitHub UI aktiviert werden (https://github.com/MGAura/aura-clipy/actions → Configure) oder lokaler Windows-Build testen.
+**Aktueller Status:** GitHub Actions Workflow-Datei lokal vorhanden, Commits mit Workflow-Erstellung warten auf Push (Authentifizierungsproblem). Workflow muss manuell über GitHub UI aktiviert werden (https://github.com/MGAura/aura-clipy/actions → Configure) oder lokaler Windows-Build testen.
