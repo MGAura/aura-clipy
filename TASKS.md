@@ -48,7 +48,7 @@
 
 | Task | Beschreibung | Status | Notizen |
 |------|--------------|--------|---------|
-| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Neuer Code: 2D6A-562C**. Martin muss zu https://github.com/login/device gehen und Code 2D6A-562C eingeben. GitHub CLI wurde neu gestartet. |
+| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Neuer Code: 6A01-2399**. Martin muss zu https://github.com/login/device gehen und Code 6A01-2399 eingeben. GitHub CLI Device Flow läuft. |
 | 5.2 | Repository öffentlich machen oder lokalen Build testen | ✅ | Repository ist öffentlich (https://github.com/MGAura/aura-clipy).
 | 5.3 | GitHub Workflow Pfade korrigieren | ✅ | Workflow-Pfade angepasst (von windows/AuraClipy/ zu Root), build.yml im Repository aktualisiert
 | 5.4 | Windows-EXE validieren | ⏳ | Funktioniert die Anwendung? (Kann nur auf Windows getestet werden)
@@ -56,10 +56,10 @@
 **Repository:** https://github.com/MGAura/aura-clipy  
 **Actions:** https://github.com/MGAura/aura-clipy/actions
 
-**Aktueller Status (2026-05-03 13:15):** Neuer Code **2D6A-562C** ist seit ~48 Minuten verfügbar! GitHub CLI ist noch nicht authentifiziert. 
+**Aktueller Status (2026-05-03 13:45):** Neuer Code **6A01-2399** ist gerade generiert! GitHub CLI wartet auf Authentifizierung. 
 
-**Nächste Aktionen (dringend):**
-1. Martin geht zu https://github.com/login/device und gibt Code 2D6A-562C ein
+**Nächste Aktionen (JETZT):**
+1. Martin geht zu https://github.com/login/device und gibt Code 6A01-2399 ein (gültig bis ca. 14:00)
 2. Alternativ: GitHub UI öffnen: https://github.com/MGAura/aura-clipy/actions → "New workflow"
 3. Alternativ: Windows-Build lokal testen (falls Workflow nicht möglich)
 
@@ -127,6 +127,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 13:15 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 13:45 – Heartbeat-Check ausgeführt
 
-**Aktueller Status:** Neuer Code **2D6A-562C** wurde generiert. GitHub CLI wurde neu gestartet, aber ist derzeit nicht authentifiziert. Authentifizierung erforderlich. Martin muss zu https://github.com/login/device gehen und den Code eingeben. **Code ist seit ~48 Minuten verfügbar!**
+**Aktueller Status:** One-Time Code 6A01-2399 ist frisch generiert! GitHub CLI wartet auf Authentifizierung. Authentifizierung muss innerhalb der nächsten ~15 Minuten durchgeführt werden.
