@@ -1,17 +1,16 @@
-**Letzte Aktualisierung:** 2026-05-03 16:17 – Heartbeat-Check durchgeführt
+**Letzte Aktualisierung:** 2026-05-03 16:45 – Heartbeat-Check durchgeführt
 
-**Heartbeat-Check:** 2026-05-03 16:17 – **Neuer Device Flow Code 5AF0-8308** wurde gerade generiert. GitHub CLI wartet auf Authentifizierung.
+**Heartbeat-Check:** 2026-05-03 16:45 – **Neuer Device Flow Code 58FC-147F** wurde gerade generiert. Code ist frisch und gültig (~15 Minuten).
 
-**Nächster Schritt:** GitHub login/device öffnen: https://github.com/login/device → Code **5AF0-8308** eingeben → Scope `workflow` wählen → Authentifizierung abschließen
+**Nächster Schritt:** GitHub login/device öffnen: https://github.com/login/device → Code **58FC-147F** eingeben → Scope `workflow` wählen → Authentifizierung abschließen
 
-**Alternative:** Wenn Code abgelaufen ist, GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren
+**Alternative:** Wenn Device Flow nicht funktioniert, GitHub UI manuell nutzen: https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren (siehe UPDATE_FOR_MARTIN.md)
 
 **Workflow-Inhalt:** Bereit im lokalen Repository (.github/workflows/build.yml), wartet auf Push.
 
 **Repository:** https://github.com/MGAura/aura-clipy (ÖFFENTLICH)
 **GitHub Actions:** https://github.com/MGAura/aura-clipy/actions
-**Rate-Limit:** Eventuell zurückgesetzt, neuer Versuch möglich
-**Neuer Code:** 5AF0-8308 (gerade generiert, frisch und gültig)
+**Code-Gültigkeit:** 58FC-147F (frisch generiert, gültig für ~15 Minuten)
 
 ## Aktueller Stand
 
@@ -49,13 +48,14 @@
 | 15:18 | 8E3B-4A09 | ❌ Web-Flow fehlgeschlagen |
 | 15:36 | C90A-1B22 | ❌ Abgelaufen (~15 Minuten) |
 | 15:54 | 6FF9-A331 | ❌ Abgelaufen (~20 Minuten) |
-| **16:17** | **5AF0-8308** | ⚡ **FRISCH generiert!** |
+| 16:17 | 5AF0-8308 | ❌ Abgelaufen (~28 Minuten) |
+| **16:45** | **58FC-147F** | ⚡ **FRISCH generiert!** |
 
 ## Update für Martin
 
-**Neuer One-Time Code: 5AF0-8308**
-- Code wurde gerade generiert (16:17)
-- **15 Minuten gültig bis ~16:32**
+**Neuer One-Time Code: 58FC-147F**
+- Code wurde gerade generiert (16:45)
+- **15 Minuten gültig bis ~17:00**
 - Scope `workflow` wählen
 - GitHub login/device öffnen: https://github.com/login/device
-- Wenn nicht erfolgreich: GitHub UI manuelle Methode nutzen
+- Wenn nicht erfolgreich: GitHub UI manuelle Methode nutzen (siehe UPDATE_FOR_MARTIN.md)
