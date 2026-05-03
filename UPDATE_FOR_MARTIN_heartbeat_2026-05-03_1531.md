@@ -1,0 +1,118 @@
+# Heartbeat-Update: Codiac Win Assistent
+
+**Zeit:** 2026-05-03 15:31  
+**Status:** GitHub Authentifizierung - NEUER Code verfügbar!
+
+## 🔄 Aktuelle Situation
+
+**Aktueller Code:** **8E3B-4A09** (vor 13 Minuten generiert, 15:18 Uhr)
+**GitHub CLI:** Device Flow läuft (PID: 6745) und wartet auf Eingabe
+**Code-Gültigkeit:** Noch **~2-17 Minuten** (bis ca. 15:33-15:48 Uhr)
+**Rate-Limit:** Vorbei
+
+**GitHub CLI wartet auf Browser-Authentifizierung** mit Code **8E3B-4A09** bei https://github.com/login/device.
+
+## Lösungsschritte (JETZT notwendig - Code läuft bald ab!)
+
+### Option A (Einfachster Weg - 2 Minuten)
+1. **Öffne:** https://github.com/login/device im Browser
+2. **Gib ein:** Den Code **8E3B-4A09**
+3. **Klicke:** "Continue" → "Authorize"
+4. **Stelle sicher:** Dass `workflow` Scope ausgewählt ist
+5. **Danach:** Ich kann automatisch pushen und der Workflow startet
+
+### Option B (Manuelle Workflow - 5 Minuten)
+1. **Gehe zu:** https://github.com/MGAura/aura-clipy/actions
+2. **Klicke:** "New workflow" → "Set up a workflow yourself"
+3. **Kopiere** den Inhalt von `build.yml` (siehe unten)
+4. **Speichere** direkt im Hauptbranch
+
+## Workflow-Inhalt (Kurzversion)
+
+```yaml
+name: Windows Build Test
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+    
+    - name: Install Windows Desktop workload
+      run: dotnet workload install windowsdesktop
+    
+    - name: Restore dependencies
+      run: |
+        cd aura-clipy
+        dotnet restore AuraClipy.csproj
+    
+    - name: Build Release
+      run: |
+        cd aura-clipy
+        dotnet build AuraClipy.csproj --configuration Release --no-restore
+    
+    - name: Publish Windows executable (self-contained)
+      run: |
+        cd aura-clipy
+        dotnet publish AuraClipy.csproj --configuration Release --runtime win-x64 --self-contained true --output ./publish/win-x64
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: windows-build-artifacts
+        path: |
+          aura-clipy/bin/Release/net10.0-windows/
+          aura-clipy/publish/win-x64/
+```
+
+## Zeitliche Dringlichkeit
+
+**Code:** 8E3B-4A09  
+**Generiert:** 15:18 Uhr  
+**Läuft ab:** ca. 15:33-15:48 Uhr  
+**Verbleibende Zeit:** ~2-17 Minuten!
+
+**Wenn dieser Code abläuft:** Ich muss einen neuen Authentifizierungsversuch starten, was weitere Verzögerung bedeutet.
+
+## Was bereits erledigt ist
+
+1. ✅ GitHub Repository öffentlich (https://github.com/MGAura/aura-clipy)
+2. ✅ GitHub Actions Workflow-Datei vorhanden (.github/workflows/build.yml)
+3. ✅ Alle Commits lokal bereit (10 Commits warten auf Push)
+4. ✅ Rate-Limit ist vorbei
+5. ✅ GitHub CLI Device Flow läuft mit frischem Code
+
+## Nächste Schritte
+
+**DRINGEND:** Code **8E3B-4A09** jetzt eingeben → Dann kann ich sofort pushen und der Workflow startet automatisch.
+
+**Alternativen (wenn Code abläuft):**
+1. Neuen Authentifizierungsversuch starten (`gh auth login --scopes workflow`)
+2. Manuell Workflow erstellen (Option B)
+3. Lokaler Windows-Build mit `Build-Skripte\build.cmd`
+
+## Projekt-Status
+
+**Win Assistent:** Phase 5 (Build-Test) blockiert durch Authentifizierung  
+**Bereit für CI/CD:** Sobald Workflow aktiv ist, läuft automatischer Windows-Build  
+**Repository:** https://github.com/MGAura/aura-clipy  
+**Letzter Commit:** `c8f917a` (Update heartbeat status)
+
+**Deine Aktion:** Code **8E3B-4A09** bei https://github.com/login/device eingeben → fertig.
+
+---
+
+*Codiac Heartbeat läuft stabil. Win Assistent wartet auf deine Entscheidung - Code läuft in ~2-17 Minuten ab!*

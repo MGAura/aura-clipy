@@ -48,7 +48,7 @@
 
 | Task | Beschreibung | Status | Notizen |
 |------|--------------|--------|---------|
-| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Neuer Code: 8E3B-4A09**. Martin muss zu https://github.com/login/device gehen und Code 8E3B-4A09 eingeben. GitHub CLI Device Flow läuft. |
+| 5.1 | GitHub Actions Workflow auslösen | 🔄 | **Neuer Code: C90A-1B22**. Martin muss zu https://github.com/login/device gehen und Code C90A-1B22 eingeben. GitHub CLI Device Flow läuft. |
 | 5.2 | Repository öffentlich machen oder lokalen Build testen | ✅ | Repository ist öffentlich (https://github.com/MGAura/aura-clipy).
 | 5.3 | GitHub Workflow Pfade korrigieren | ✅ | Workflow-Pfade angepasst (von windows/AuraClipy/ zu Root), build.yml im Repository aktualisiert
 | 5.4 | Windows-EXE validieren | ⏳ | Funktioniert die Anwendung? (Kann nur auf Windows getestet werden)
@@ -127,6 +127,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 15:18 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-03 15:31 – Heartbeat-Check ausgeführt
 
-**Aktueller Status:** Rate-Limit vorbei. **Neuer Code 8E3B-4A09** generiert. Device Flow wieder verfügbar. GitHub login/device verwenden mit Code **8E3B-4A09**.
+**Aktueller Status:** Neuer Code **8E3B-4A09** wurde vor 13 Minuten (15:18) generiert. GitHub CLI Device Flow läuft (PID: 6745) und wartet auf Eingabe. Code ist noch gültig (~2-17 Minuten verbleibend).

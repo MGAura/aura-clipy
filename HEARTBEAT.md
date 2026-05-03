@@ -1,4 +1,4 @@
-**Letzter Check:** 2026-05-03 15:15
-**Status:** Heartbeat-Check durchgeführt. Rate-Limit wahrscheinlich vorbei. Code 4ABA-D376 abgelaufen (54 Minuten alt). Neuer Authentifizierungsversuch gestartet.
-**Nächster Schritt:** Neuer Device Flow Code generiert. GitHub Authentifizierung für Workflow-Push.
-**Update:** STATUS.md & TASKS.md aktualisiert.
+**Letzter Check:** 2026-05-03 15:36
+**Status:** Heartbeat-Check durchgeführt. Web-Flow mit Code 8E3B-4A09 fehlgeschlagen. Neuer Device Flow Code C90A-1B22 generiert.
+**Nächster Schritt:** GitHub Authentifizierung mit Code C90A-1B22.
+**Update:** STATUS.md & TASKS.md aktualisiert. Neue Update-Datei für Martin erstellt.
