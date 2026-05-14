@@ -1,4 +1,4 @@
-**Letzte Aktualisierung:** 2026-05-03 19:45 – Heartbeat-Check durchgeführt
+**Letzte Aktualisierung:** 2026-05-14 02:12 – Heartbeat-Check durchgeführt (10 Tage nach letztem Problem, Status unverändert)
 
 **⚠️ KRITISCHES PROBLEM:** GitHub API/PUSH blockiert Workflow-Creation/Update wegen fehlendem `workflow` OAuth Scope
 - GitHub verweigert OAuth Apps ohne `workflow` Scope, Workflow-Dateien zu erstellen/aktualisieren
@@ -123,6 +123,8 @@ jobs:
 | **17:40** | **N/A** | ⚠️ **Workflow Pfad-Problem erkannt** |
 | **18:15** | **Heartbeat-Check** | 🔄 **GitHub UI manuelle Lösung empfohlen** |
 | **19:18** | **Git Push** | ❌ **Abgelehnt: OAuth `workflow` Scope fehlt** |
+| **20:15** | **Heartbeat-Check** | 🔄 **Neuer Device Flow Code erzeugt** |
+| **20:32** | **GitHub CLI Re-Auth** | ❌ **Device Flow fehlgeschlagen - CLI NICHT möglich** |
 
 ## Update für Martin
 

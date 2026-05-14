@@ -55,13 +55,12 @@
 **Repository:** https://github.com/MGAura/aura-clipy  
 **Actions:** https://github.com/MGAura/aura-clipy/actions
 
-**Aktueller Status (2026-05-03 19:18):** Heartbeat-Check durchgeführt. **GitHub blockiert Workflow-Creation/Update wegen fehlendem OAuth `workflow` Scope.** Workflow kann nicht automatisch erstellt/aktualisiert werden.
+**Aktueller Status (2026-05-14 02:12):** Heartbeat-Check durchgeführt. **KEINE FORTSCHRITTE seit 10 Tagen.** GitHub UI manuelle Workflow-Erstellung ist die **EINZIGE** verbleibende Option und wurde NOCH NICHT durchgeführt.
 
 **Nächste Aktionen (EMPFEHLUNG):**
-1. **⚠️ GitHub UI manuell nutzen:** Gehe zu https://github.com/MGAura/aura-clipy/actions → "New workflow" → Workflow-Inhalt kopieren (siehe UPDATE_FOR_MARTIN.md) → Als build.yml speichern
-2. **Alternative:** GitHub CLI mit erweiterten Scopes neu authentifizieren: `gh auth login --scopes workflow,repo`
-
-**Update für Martin:** UPDATE_FOR_MARTIN.md bereitgestellt mit Schritt-für-Schritt-Anleitung für GitHub UI.
+1. ⚠️ **GitHub UI manuell nutzen (EINZIGE OPTION):** Gehe zu https://github.com/MGAura/aura-clipy/actions → "New workflow" → "Set up a workflow yourself" → Name `build.yml` → YAML-Code einfügen → "Start commit" → "Commit directly to the main branch"
+2. Workflow startet automatisch und Windows Build wird ausgeführt
+3. EXE-Dateien als Artefakte verfügbar
 
 ## ⏳ Geplant
 
@@ -125,6 +124,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-03 19:45 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-14 02:12 – Heartbeat-Check ausgeführt
 
-**Aktueller Status:** ⚠️ **KRITISCH:** GitHub blockiert Workflow-Push wegen fehlendem OAuth `workflow` Scope. Workflow-Datei existiert lokal korrekt in `.github/workflows/build.yml`, kann aber nicht auf GitHub gepusht werden. Nur manuelle GitHub UI-Erstellung möglich.
+**Aktueller Status:** ⚠️ **KRITISCH:** Projekt seit 10 Tagen blockiert. GitHub blockiert Workflow-Push wegen fehlendem OAuth `workflow` Scope. GitHub UI manuelle Workflow-Erstellung wurde NOCH NICHT durchgeführt.
