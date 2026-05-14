@@ -1,19 +1,33 @@
-## 📋 Kurzanleitung für Martin - AKTUELLER STAND
+# Update für Martin – Codiac Heartbeat Check
 
-**Problem:** GitHub blockiert automatische Workflow-Erstellung wegen fehlendem OAuth `workflow` Scope.
-- Workflow-Datei existiert lokal korrekt in `.github/workflows/build.yml`
-- Git Push wird abgelehnt mit Fehler: "refusing to allow an OAuth App to create or update workflow `.github/workflows/build.yml` without `workflow` scope"
-- **Lösung:** Nur manuelle Erstellung über GitHub UI möglich
+## Status (14. Mai 2026, 02:43 Uhr)
 
-**Was zu tun ist:**
-1. **GitHub Actions öffnen:** https://github.com/MGAura/aura-clipy/actions
-2. **"New workflow" klicken** (grüner Button)
-3. **"Set up a workflow yourself" wählen**
-4. **YAML-Code kopieren** (unten bereit)
-5. **Name:** `build.yml` eintragen
-6. **Commit to main branch** → Workflow startet automatisch
+**⚠️ KRITISCHES PROBLEM:** GitHub blockiert Workflow-Creation seit **10 Tagen** wegen fehlendem OAuth `workflow` Scope.
 
-**Workflow-Code zum Kopieren:**
+## Was ist passiert?
+
+1. **GitHub API/PUSH blockiert** Workflow-Creation/Update
+2. **Token-Scope Problem:** Dein GitHub Token hat nur `gist`, `read:org`, `repo` Scopes, aber nicht `workflow`
+3. **Workflow-Datei existiert lokal** (`.github/workflows/build.yml`) im Repository
+4. **Push wird abgelehnt** mit Fehler: "refusing to allow an OAuth App to create or update workflow `.github/workflows/build.yml` without `workflow` scope"
+5. **GitHub Actions zeigt 0 Workflows** (weil Workflow noch nicht auf GitHub ist)
+
+## Was muss getan werden?
+
+### 🎯 **EINZIGE LÖSUNG:** GitHub UI manuell nutzen
+
+**Schritt-für-Schritt:**
+
+1. **Gehe zu:** https://github.com/MGAura/aura-clipy/actions
+2. **Klicke auf "New workflow"**
+3. **Oder direkter Link:** https://github.com/MGAura/aura-clipy/new/main/.github/workflows/build.yml
+4. **Füge den Workflow-Code ein** (siehe unten)
+5. **Speicere** als `.github/workflows/build.yml`
+6. **Klicke "Start commit"** → "Commit directly to the main branch"
+7. **Workflow startet automatisch** und Windows Build wird ausgeführt
+
+## Workflow-Code (kopiere in GitHub UI)
+
 ```yaml
 name: Windows Build Test
 
@@ -59,17 +73,11 @@ jobs:
       run: |
         echo "=== Build Output ==="
         if (Test-Path "aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe") {
-          echo "✅ Main EXE: aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe"
-          Get-Item "aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe" | Format-List *
-        } else {
-          echo "❌ Main EXE not found in bin/"
+          echo "Main EXE: aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe"
         }
         
         if (Test-Path "aura-clipy/publish/win-x64/AuraClipy.exe") {
-          echo "✅ Published EXE: aura-clipy/publish/win-x64/AuraClipy.exe"
-          Get-Item "aura-clipy/publish/win-x64/AuraClipy.exe" | Format-List *
-        } else {
-          echo "❌ Published EXE not found"
+          echo "Published EXE: aura-clipy/publish/win-x64/AuraClipy.exe"
         }
     
     - name: Upload build artifacts
@@ -80,34 +88,34 @@ jobs:
           aura-clipy/bin/Release/net10.0-windows/
           aura-clipy/publish/win-x64/
         if-no-files-found: warn
-    
-    - name: Run simple tests (if executable exists)
-      run: |
-        if (Test-Path "aura-clipy/bin/Release/net10.0-windows/AuraClipy.exe") {
-          echo "✅ Main EXE exists, would run tests here"
-          # Add actual test execution when implemented
-        } else {
-          echo "⚠️ No executable found for tests"
-        }
 ```
 
-**Status:** 
-- ✅ Repository ist öffentlich und synchronisiert
-- ✅ Workflow-Datei existiert lokal korrekt
-- ❌ GitHub API/PUSH blockiert Workflow-Creation/Update (fehlender `workflow` Scope)
-- 🔄 **Manuelle GitHub UI-Erstellung erforderlich**
+## Alternative Option (falls GitHub CLI neu auth)
 
-**Warum nur GitHub UI?**
-- GitHub verweigert OAuth Apps ohne `workflow` Scope, Workflow-Dateien zu erstellen/aktualisieren
-- Alle Device Flow Codes sind abgelaufen
-- Workflow-Datei kann nicht automatisch auf GitHub gepusht werden
-- Einfache Lösung: GitHub UI manuelle Erstellung
-
-**Alternative (falls du GitHub CLI neu konfigurieren willst):**
+Wenn du GitHub CLI neu authentifizieren willst:
 ```bash
 gh auth login --scopes workflow,repo
 ```
-Dann könnten wir es automatisch versuchen.
+Aber **Achtung:** Das erfordert erneute Authentifizierung und ist komplexer als die UI-Lösung.
 
-**Aktuelle Zeit:** 2026-05-03 19:18 (Herzschlag-Prüfung)
-**Nächster Schritt:** GitHub UI Workflow erstellen (wie oben)
+## Projektstand
+
+- ✅ **Phasen 1-4 komplett implementiert**
+- ✅ **Repository ist öffentlich und synchronisiert**
+- ✅ **21 lokale Commits sind auf GitHub**
+- ✅ **Workflow-Datei existiert lokal korrekt**
+- ❌ **Workflow kann nicht automatisch gepusht werden** (OAuth Restriction)
+- ⚠️ **Projekt seit 10 Tagen blockiert**
+
+## Nächste Schritte nach Workflow-Creation
+
+1. **GitHub Actions Workflow** wird automatisch ausgelöst
+2. **Windows Build** wird auf GitHub Runnern ausgeführt (~5-10 Minuten)
+3. **EXE-Dateien** werden als Artefakte verfügbar sein
+4. **Build-Erfolg/Misserfolg** wird in GitHub Actions sichtbar
+
+---
+
+**Zusammenfassung:** Die einzige verbleibende Hürde ist die manuelle Erstellung des GitHub Actions Workflows über die Web UI. Sobald das erledigt ist, wird der CI/CD-Prozess automatisch laufen und die Windows-EXE produziert werden.
+
+**Frage:** Brauchst du Hilfe dabei, oder soll ich den Workflow-Code noch einmal anders aufbereiten?

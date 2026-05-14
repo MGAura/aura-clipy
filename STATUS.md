@@ -1,4 +1,4 @@
-**Letzte Aktualisierung:** 2026-05-14 02:12 – Heartbeat-Check durchgeführt (10 Tage nach letztem Problem, Status unverändert)
+**Letzte Aktualisierung:** 2026-05-14 02:43 – Heartbeat-Check durchgeführt (10 Tage nach letztem Problem, Status unverändert)
 
 **⚠️ KRITISCHES PROBLEM:** GitHub API/PUSH blockiert Workflow-Creation/Update wegen fehlendem `workflow` OAuth Scope
 - GitHub verweigert OAuth Apps ohne `workflow` Scope, Workflow-Dateien zu erstellen/aktualisieren

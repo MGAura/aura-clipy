@@ -124,6 +124,6 @@ Win Assistent/
 
 ---
 
-**Letzte Aktualisierung:** 2026-05-14 02:12 – Heartbeat-Check ausgeführt
+**Letzte Aktualisierung:** 2026-05-14 02:43 – Heartbeat-Check ausgeführt
 
 **Aktueller Status:** ⚠️ **KRITISCH:** Projekt seit 10 Tagen blockiert. GitHub blockiert Workflow-Push wegen fehlendem OAuth `workflow` Scope. GitHub UI manuelle Workflow-Erstellung wurde NOCH NICHT durchgeführt.
